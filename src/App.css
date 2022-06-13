@@ -1,0 +1,152 @@
+
+@font-face {
+  font-family: 'digital-7-mono-italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/digital-7/digital-7-mono-italic.woff') format('woff');
+}
+    
+
+@font-face {
+  font-family: 'digital-7-mono-mono';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/digital-7/digital-7-mono.woff') format('woff');
+}
+    
+
+@font-face {
+  font-family: 'digital-7';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/digital-7/digital-7.woff') format('woff');
+}
+    
+
+@font-face {
+  font-family: 'digital-7-italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./assets/fonts/digital-7/digital-7-italic.woff') format('woff');
+}
+
+.strategy-chart {
+  border: 1px solid #484848;
+  border-radius: 10px;
+  background-color: rgba(51, 50, 50,0.7);
+  padding: 30px 25px;
+}
+
+.time-checkbox {
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0;
+}
+
+.time-checkbox input {
+  display: none;
+}
+
+.time-checkbox span {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.time-checkbox span:before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: 0.3s ease all;
+}
+
+.time-checkbox input:checked + span:before {
+  background-color: #f15200;
+}
+
+
+.equity-box {
+  background-color: #2e2e2e;
+  border: 1px solid #484848;
+  border-radius: 5px;
+  line-height: 24px;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.equity-box .character,
+.equity-box .dot {
+  font-family: 'digital-7';
+  color: #ff6300;
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.equity-box .character-box {
+  position: relative;
+  display: inline-block;
+  min-width: 35px;
+  text-align: right;
+}
+
+.equity-box .character-box:before {
+  content: '8';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #403e3e;
+  font-family: 'digital-7';
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+.equity-box-main footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-top: 10px;
+}
+
+.equity-box-main footer .title {
+  color: #fff;
+  font-size: 12px;
+}
+
+.equity-box-main footer .stats {
+  color: #00e396;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.FlipClock .flipUnitContainer .ContainerTitle {
+  color: #fff;
+  font-size: 12px;
+  top: -20px;
+}
+
+.content .timeAccount .timeLoc {
+  margin-right: 20px;
+}
+
+.clocks-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.clocks-wrap .clock-item {
+  margin: 0 25px;
+  width: calc(25% - 50px);
+}
