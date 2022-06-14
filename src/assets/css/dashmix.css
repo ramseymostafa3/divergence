@@ -29,6 +29,7 @@ body {
   color: #495057;
   text-align: left;
   background-color: #f0f3f8;
+  overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -13097,14 +13098,15 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 .content .timeAccount {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
 }
 
+
 .content .timeIntro {
   text-align: center;
-  margin: 0 25px 0 0;
+  margin: 0;
 }
 
 .content .timeIntro h6 {
@@ -13137,7 +13139,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   text-transform: uppercase;
   margin: 0;
   padding: 8px 15px;
-  width: 200px;
+  width: 180px;
 }
 
 .content .timeIntro .button.stop {
@@ -13155,10 +13157,21 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 }
 
 .content .timeAccount ul li {
-  width: 33.33%;
   font-size: 13px;
   line-height: 20px;
   color: #fff;
+}
+.content .timeAccount ul li,
+.content .timeAccount ul li:nth-child(4) {
+  width: 25%;
+}
+.content .timeAccount ul li:nth-child(2),
+.content .timeAccount ul li:nth-child(5) {
+  width: 35%;
+}
+.content .timeAccount ul li:nth-child(3),
+.content .timeAccount ul li:nth-child(6) {
+  width: 40%;
 }
 
 .content .timeAccount ul li:nth-child(n+4) {
@@ -13170,7 +13183,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   flex-direction: row;
   align-items: center;
   list-style: none;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   padding: 0;
   width: 100%;
 }
@@ -13516,8 +13529,28 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   padding-right: 0.875rem;
 }
 
-.content-header .headleft,
+.content-header .headleft {
+  
+}
 .content-header .headright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-header .headleft {
+  width: 65%;
+}
+.content-header .headright {
+  width: 30%;
+}
+.content-header .menuDesktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-header .headuser {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13527,7 +13560,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   font-size: 20px;
   line-height: 30px;
   color: #f76400;
-  margin: 0 60px 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -13541,7 +13574,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   flex-direction: row;
   border-radius: 17px;
   overflow: hidden;
-  width: 600px;
+  width: 68%;
 }
 
 .content-header .headerSearch .form-control {
@@ -13585,7 +13618,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   line-height: 20px;
   color: #f6ae7e;
   letter-spacing: 0.5px;
-  margin: 0 60px 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -13614,10 +13647,10 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 }
 
 @media (min-width: 768px) {
-  #page-header .content-header {
+  /* #page-header .content-header {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
-  }
+  } */
 }
 
 #sidebar .content-header,
@@ -14123,6 +14156,9 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   color: #6c757d;
 }
 
+.rowDivergent.row01 {
+  align-items: center;
+}
 .rowDivergent+.rowDivergent {
   margin-top: 30px
 }
@@ -14157,7 +14193,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   font-size: 12px;
   line-height: 20px;
   color: #fff;
-  padding: 5px 30px 5px 10px;
+  padding: 5px 10px;
 }
 
 .blockDivergent .fieldContainer .form-control:focus {
@@ -14190,6 +14226,12 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 
 .form-control::-ms-input-placeholder {
   color: #747474;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
 .blockDivergent {
@@ -29201,4 +29243,351 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     left: -100%;
     right: auto;
   }
+}
+
+
+.strategy-chart {
+  border: 1px solid #484848;
+  border-radius: 10px;
+  background-color: rgba(51, 50, 50,0.7);
+  padding: 30px 25px;
+}
+
+.time-checkbox {
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.time-checkbox input {
+  display: none;
+}
+
+.time-checkbox span {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.time-checkbox span:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: 0.3s ease all;
+}
+
+.time-checkbox input:checked + span:before {
+  background-color: #f15200;
+}
+
+.equity-box {
+  background-color: #2e2e2e;
+  border: 1px solid #484848;
+  border-radius: 5px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto 20px;
+}
+
+.equity-box .character,
+.equity-box .dot {
+  font-family: 'digital-7';
+  color: #ff6300;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.equity-box .character-box {
+  position: relative;
+  display: inline-block;
+  min-width: 35px;
+  text-align: right;
+}
+
+.equity-box .character-box:before {
+  content: '8';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #403e3e;
+  font-family: 'digital-7';
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+.equity-box-main footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-top: 10px;
+}
+
+.equity-box-main footer .title {
+  color: #fff;
+  font-size: 12px;
+}
+
+.equity-box-main footer .stats {
+  color: #00e396;
+  font-size: 12px;
+  font-weight: 500;
+}
+.FlipClock {
+  padding: 20px 0 0;
+}
+.FlipClock .flipUnitContainer .ContainerTitle {
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  top: -20px;
+}
+
+.content .timeAccount .timeLoc {
+  margin: 0 15px;
+}
+
+.clocks-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.clocks-wrap .clock-item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+.clocks-wrap .clock-item > div {
+  transform: scale(0.4);
+  position: absolute;
+  top: -90px;
+  left: -90px;
+}
+.clocks-wrap .clock-item > label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  margin: auto;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  color: #858585;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.FlipClock .flipUnitContainer,
+.FlipClock .flipUnitContainer .flipCard.fold {
+  background: rgb(68,68,68);
+  background: linear-gradient(180deg, rgba(68,68,68,1) 0%, rgba(50,50,50,1) 100%);
+}
+.FlipClock .flipUnitContainer .flipCard.unfold,
+.FlipClock .flipUnitContainer .lowerCard {
+  background: rgb(27,27,27);
+  background: linear-gradient(180deg, rgba(27,27,27,1) 0%, rgba(35,35,35,1) 100%);
+}
+.FlipClock .flipUnitContainer {
+  box-shadow: none;
+}
+.FlipClock .divider {
+  width: 7px;
+  margin: auto 0;
+}
+
+/* PROGRESS BARS */
+
+.divMonetry label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
+}
+
+.progMonetry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0 15px;
+}
+
+.progress.vertical {
+  position: relative;
+  width: 20px;
+  height: 120px;
+  display: block;
+  margin: 0 10px;
+}
+
+.progress {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 25px;
+  overflow: hidden;
+  background-color: #a1a1a1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  /* -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); */
+}
+
+.progress.vertical > .progress-bar {
+  width: 100% !important;
+  position: absolute;
+  bottom: 0;
+}
+
+.progress-bar {
+  box-shadow: none;
+}
+
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #f15200;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  /* -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15); */
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+.divTotal { margin: 0 0 30px; }
+.divSpeedo { width: 100%; }
+.menuMob,
+.content-header .headright button { display: none; }
+
+@media only screen and (max-width: 1800px) {
+  .content-header h3 { font-weight: 500; font-size: 16px; line-height: 24px; }
+  .content-header .headerSearch { width: 65%; }
+  .content-header .headright h5 { margin: 0 10px 0 0; font-weight: 500; font-size: 14px; line-height: 20px; }
+  .content-header .headright p { font-size: 12px; }
+  .img-avatar { width: 60px; height: 60px; }
+  #page-footer .footer-text { font-size: 12px; line-height: 16px; }
+  #page-footer .footer-text .downloadapp > img { max-width: 100px; }
+  .clocks-wrap .clock-item { margin: 0 30px 15px; flex: 0 0 120px; }
+  .content .timeAccount { flex-wrap: wrap; }
+  .content .timeIntro,
+  .content .flipclock-wrap { width: 50%; justify-content: center; }
+  .content .flipclock-wrap .FlipClock { width: auto; justify-content: center; }
+  .content .timeIntro .button { margin: 0 auto; }
+  .content .timeAccount .timeLoc { margin: 0; order: 3; width: 100%; }
+  .content .timeAccount ul { padding-top: 20px; }
+  .content .timeAccount ul li { text-align: center; }
+  .rowStat .label { font-size: 12px; }
+  .equity-box .character,
+  .equity-box .dot,
+  .equity-box .character-box:before { font-size: 48px; }
+  .equity-box .character-box { min-width: 28px; }
+}
+@media only screen and (max-width: 1600px) {
+  .content-header .headleft,
+  .content-header .headright { width: 45%; }
+  .content-header .headerSearch { width: 100%; }
+  .content-header .menuDesktop { flex-direction: column; align-items: flex-start; justify-content: center; }
+  .content-header h3 { margin: 0 0 5px; }
+  #page-footer .footer-text a,
+  #page-footer .reserved { display: block; }
+  .clocks-wrap .clock-item { margin: 0 20px 15px; }
+  .content .statusAccount { flex-wrap: wrap; }
+  .content .statusAccount li { width: 25%; }
+  .content .statusAccount li:before { display: none; }
+  .row03 > [class^="col-"],
+  .row03 > [class*=" col-"],
+  .row04 > [class^="col-"],
+  .row04 > [class*=" col-"],
+  .row05 > [class^="col-"],
+  .row05 > [class*=" col-"] { width: 100%; max-width: 100%; flex: 0 0 100%; }
+  .strategy-chart { margin: 0 0 30px; }
+  #main-container .content { padding-bottom: 40px; }
+  .row04 .blockDivergent { margin-top: 20px; }
+}
+@media only screen and (max-width: 1270px) {
+  .clocks-wrap .clock-item { margin: 0 15px 15px; }
+}
+@media only screen and (max-width: 1200px) {
+  #sidebar { width: 30%; }
+  #page-container.page-header-fixed.sidebar-o #page-header,
+  #page-container.page-header-glass.sidebar-o #page-header,
+  #page-container.sidebar-o { padding-left: 30%; }
+  #page-container.side-scroll #sidebar .content-header,
+  #page-container.side-scroll #sidebar .content-side { width: 100% !important;}
+  #main-container .content,
+  #page-footer .content { padding-left: 0.875rem; padding-right: 0.875rem; }
+  .content .timeAccount ul { padding-bottom: 20px; }
+}
+@media only screen and (max-width: 1024px) {
+
+}
+@media only screen and (max-width: 992px) {
+  #page-container.page-header-fixed.sidebar-o #page-header,
+  #page-container.page-header-glass.sidebar-o #page-header,
+  #page-container.sidebar-o { padding-left: 0; }
+  #page-footer .footer-text a,
+  #page-footer .reserved { display: inline; }
+  #page-footer .footer-text { flex-direction: column; }
+  #page-footer .footer-text .downloadapp { margin: 0 7.5px; }
+  #page-footer { padding: 15px 0;}
+  #page-footer .footer-text span { margin: 10px 0; }
+  .content-header .headright { width: 20%; justify-content: flex-start; flex-direction: row-reverse; }
+  .content-header .headuser { flex-direction: column;  }
+  .content-header .headright h5 { order: 2; margin: 0; padding: 2px 0 0;}
+  .content-header .headright p { display: none; }
+  .content-header .headleft { width: 70%; display: flex; flex-direction: row; }
+  .menuMob { display: block; margin: 0 15px 0 0; }
+  .content-header .headright button { display: block; background-color: #f76400; border: none; color: #333232; margin: 0 0 0 15px; }
+  .content-header .headright button.btn-dual:not(:disabled):not(.disabled):active { background-color: #f76400; border: none; color: #030304; }
+  #sidebar.active { width: 100%; left: 100%; }
+}
+
+@media only screen and (max-width: 768px) {
+  .content .statusAccount li { width: 50%; }
+  .buttonsAccount { flex-wrap: wrap; }
+  .buttonsAccount li { width: 100%; }
+  .buttonsAccount li+li { margin-top: 15px; }
+}
+@media only screen and (max-width: 595px) {
+  .divSpeedo { width: 270px; margin: 0 auto; text-align: center; }
+}
+@media only screen and (max-width: 480px) {
+  .content .timeIntro,
+  .content .flipclock-wrap { width: 100%; }
+  .content .timeIntro { margin: 0 0 20px; }
+  .content .timeAccount ul li,
+  .content .timeAccount ul li:nth-child(2),
+  .content .timeAccount ul li:nth-child(3),
+  .content .timeAccount ul li:nth-child(4),
+  .content .timeAccount ul li:nth-child(5),
+  .content .timeAccount ul li:nth-child(6),
+  .content .statusAccount li { width: 100%; }
+  
 }

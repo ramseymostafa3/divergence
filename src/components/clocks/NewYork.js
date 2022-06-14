@@ -1,3 +1,4 @@
+import React from 'react';
 import AnalogueClock from 'react-analogue-clock';
 
 function NewYork () {
@@ -14,11 +15,12 @@ function NewYork () {
         notchColor: '#000000',
         numbersColor: '#000000',
         showNumbers: false,
-        size: 100,
+        size: 300,
     }
     return (
         <div className="clock-item">
             <AnalogueClock {...clockOptions} />
+            <label>Newyork</label>
         </div>
     );
 }
