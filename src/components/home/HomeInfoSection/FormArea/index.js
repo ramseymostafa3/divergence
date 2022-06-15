@@ -1,53 +1,38 @@
 import React from "react";
+import FormField from '../../../common/FormField';
 
 function FormArea() {
   return (
     <div className="blockDivergent">
       <div className="row">
-        <div className="col-md-6">
-          <div className="fieldContainer">
-            <i className="fa fa-user"></i>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Grace Brown"
-              value=""
-            />
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="fieldContainer">
-            <i className="fas fa-calendar-alt"></i>
-            <input
-              type="date"
-              className="form-control"
-              placeholder="Start Date"
-              value=""
-            />
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="fieldContainer">
-            <i className="fas fa-history"></i>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Granularity"
-              value=""
-            />
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="fieldContainer">
-            <i className="fas fa-calendar-alt"></i>
-            <input
-              type="date"
-              className="form-control"
-              placeholder="End Date"
-              value=""
-            />
-          </div>
-        </div>
+        <FormField
+          column={"col-md-6"}
+          icon={"fa fa-user"}
+          type="text"
+          fieldclass={"form-control"}
+          placeholder={"Grace Brown"}
+        />
+        <FormField
+          column={"col-md-6"}
+          icon={"fas fa-calendar-alt"}
+          type="date"
+          fieldclass={"form-control"}
+          placeholder={"Start Date"}
+        />
+        <FormField
+          column={"col-md-6"}
+          icon={"fas fa-history"}
+          type="text"
+          fieldclass={"form-control"}
+          placeholder={"Granularity"}
+        />
+        <FormField
+          column={"col-md-6"}
+          icon={"fas fa-calendar-alt"}
+          type="date"
+          fieldclass={"form-control"}
+          placeholder={"End Date"}
+        />
         <div className="col-md-12">
           <button className="submit" type="submit">
             Go

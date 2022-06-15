@@ -13064,19 +13064,25 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   font-size: 12px;
   line-height: 16px;
   color: #818181;
+  text-align: right;
 }
 
 #page-footer .footer-text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 20px;
   color: #f6ae7e;
   display: flex;
   align-items: center;
 }
-
+#page-footer .footerButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 #page-footer .footer-text .downloadapp {
-  margin-left: 15px;
+  margin-left: 10px;
+  display: block;
 }
 
 #page-footer .footer-text a {
@@ -13139,7 +13145,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   text-transform: uppercase;
   margin: 0;
   padding: 8px 15px;
-  width: 180px;
+  width: 140px;
 }
 
 .content .timeIntro .button.stop {
@@ -13524,9 +13530,11 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   height: 105px;
 }
 
-#page-header .content-header {
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
+#main-container .content,
+#page-header .content-header,
+#page-container > #page-footer .content {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .content-header .headleft {
@@ -13540,7 +13548,22 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 }
 .content-header .headleft {
   width: 65%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+.content-header .headleft .menuMob {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px 0 0;
+}
+
+.content-header .headleft .menuMob button { display: block; background-color: #f76400; border: none; color: #333232; margin: 0 15px 0 0; }
+.content-header .headleft .menuMob button.btn-dual:not(:disabled):not(.disabled):active { background-color: #f76400; border: none; color: #030304; }
+
+#sidebar.active { width: 100%; left: 100%; }
+
 .content-header .headright {
   width: 30%;
 }
@@ -13548,7 +13571,8 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: calc(100% - 150px);
 }
 .content-header .headuser {
   display: flex;
@@ -13556,11 +13580,11 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   align-items: center;
 }
 .content-header h3 {
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 30px;
   color: #f76400;
-  margin: 0;
+  margin: 0 15px 0 0;
   padding: 0;
 }
 
@@ -13574,7 +13598,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   flex-direction: row;
   border-radius: 17px;
   overflow: hidden;
-  width: 68%;
+  width: 65%;
 }
 
 .content-header .headerSearch .form-control {
@@ -13687,8 +13711,15 @@ a.badge-secondary:focus, a.badge-secondary.focus {
           transform: translateX(-100%) translateY(0) translateZ(0);
   -webkit-overflow-scrolling: touch;
   will-change: transform;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-
+#sidebar.menu-open {
+  -webkit-transform: translateX(0) translateY(0) translateZ(0);
+            transform: translateX(0) translateY(0) translateZ(0);
+}
 .side-trans-enabled #sidebar {
   transition: -webkit-transform 0.45s cubic-bezier(0.2, 0.61, 0.42, 0.97);
   transition: transform 0.45s cubic-bezier(0.2, 0.61, 0.42, 0.97);
@@ -13720,7 +13751,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 
 @media (min-width: 992px) {
   #sidebar {
-    width: 365px;
+    width: 320px;
   }
   .sidebar-o #sidebar {
     -webkit-transform: translateX(0) translateY(0) translateZ(0);
@@ -13879,15 +13910,16 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 #page-container > #page-header .content,
 #page-container > #main-container .content,
 #page-container > #page-footer .content {
-  max-width: 1920px;
+  /* max-width: 1920px; */
+  max-width: 1270px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1270px) {
   #page-container.main-content-narrow > #page-header .content-header,
   #page-container.main-content-narrow > #page-header .content,
   #page-container.main-content-narrow > #main-container .content,
   #page-container.main-content-narrow > #page-footer .content {
-    width: 92%;
+    width: 100%;
   }
 }
 
@@ -13895,7 +13927,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 #page-container.main-content-boxed > #page-header .content,
 #page-container.main-content-boxed > #main-container .content,
 #page-container.main-content-boxed > #page-footer .content {
-  max-width: 1200px;
+  max-width: 1270px;
 }
 
 #page-container.page-header-dark #page-header {
@@ -14262,6 +14294,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .blockDivergent ul.author li {
@@ -15207,8 +15240,8 @@ a.block.block-themed .btn-block-option:focus,
   padding: 10%;
   margin: 0;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 34px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -29357,7 +29390,16 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 }
 
 .content .timeAccount .timeLoc {
-  margin: 0 15px;
+  margin: 0 10px;
+}
+.content .timeAccount .flip-countdown {
+  width: 270px;
+}
+.content .timeAccount .flip-countdown .flip-countdown-title {
+  color: #fff;
+}
+.content .timeAccount .flipclock-wrap {
+  width: 160px;
 }
 
 .clocks-wrap {
@@ -29371,15 +29413,15 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   margin: 0;
   padding: 0;
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 111px;
+  height: 111px;
   display: block;
 }
 .clocks-wrap .clock-item > div {
-  transform: scale(0.4);
+  transform: scale(0.370);
   position: absolute;
-  top: -90px;
-  left: -90px;
+  top: -94px;
+  left: -94px;
 }
 .clocks-wrap .clock-item > label {
   position: absolute;
@@ -29483,31 +29525,16 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 
 .divTotal { margin: 0 0 30px; }
 .divSpeedo { width: 100%; }
-.menuMob,
-.content-header .headright button { display: none; }
 
-@media only screen and (max-width: 1800px) {
-  .content-header h3 { font-weight: 500; font-size: 16px; line-height: 24px; }
-  .content-header .headerSearch { width: 65%; }
-  .content-header .headright h5 { margin: 0 10px 0 0; font-weight: 500; font-size: 14px; line-height: 20px; }
-  .content-header .headright p { font-size: 12px; }
-  .img-avatar { width: 60px; height: 60px; }
-  #page-footer .footer-text { font-size: 12px; line-height: 16px; }
-  #page-footer .footer-text .downloadapp > img { max-width: 100px; }
+
+/* @media only screen and (max-width: 1800px) {
+
+  
   .clocks-wrap .clock-item { margin: 0 30px 15px; flex: 0 0 120px; }
-  .content .timeAccount { flex-wrap: wrap; }
-  .content .timeIntro,
-  .content .flipclock-wrap { width: 50%; justify-content: center; }
+  
   .content .flipclock-wrap .FlipClock { width: auto; justify-content: center; }
-  .content .timeIntro .button { margin: 0 auto; }
-  .content .timeAccount .timeLoc { margin: 0; order: 3; width: 100%; }
-  .content .timeAccount ul { padding-top: 20px; }
-  .content .timeAccount ul li { text-align: center; }
-  .rowStat .label { font-size: 12px; }
-  .equity-box .character,
-  .equity-box .dot,
-  .equity-box .character-box:before { font-size: 48px; }
-  .equity-box .character-box { min-width: 28px; }
+
+  
 }
 @media only screen and (max-width: 1600px) {
   .content-header .headleft,
@@ -29515,35 +29542,53 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .content-header .headerSearch { width: 100%; }
   .content-header .menuDesktop { flex-direction: column; align-items: flex-start; justify-content: center; }
   .content-header h3 { margin: 0 0 5px; }
+  .clocks-wrap .clock-item { margin: 0 20px 15px; }
+  
+  
+  
+  #main-container .content { padding-bottom: 40px; }
+  
+}
+@media only screen and (max-width: 1270px) {
+  
+}
+
+*/
+@media only screen and (max-width: 1270px) {
+  .equity-box .character,
+  .equity-box .dot,
+  .equity-box .character-box:before { font-size: 48px; }
+  .equity-box .character-box { min-width: 28px; }
+  .rowStat .label { font-size: 12px; }
+}
+@media only screen and (max-width: 1200px) {
   #page-footer .footer-text a,
   #page-footer .reserved { display: block; }
-  .clocks-wrap .clock-item { margin: 0 20px 15px; }
-  .content .statusAccount { flex-wrap: wrap; }
-  .content .statusAccount li { width: 25%; }
-  .content .statusAccount li:before { display: none; }
+  #page-footer .footer-text .downloadapp > img { max-width: 120px; }
+  .content-header h3 { font-weight: 500; font-size: 16px; line-height: 24px; }
+  .content-header .headerSearch { width: 90%; }
+  .content-header .headright h5 { margin: 0 10px 0 0; font-weight: 500; font-size: 14px; line-height: 20px; }
+  .content-header .headright p { font-size: 12px; }
+  .img-avatar { width: 60px; height: 60px; }
+  .content-header .menuDesktop { flex-direction: column; align-items: center; justify-content: center; }
+  .content-header h3 { margin: 0 0 5px; }
+  .content-header .headuser { flex-direction: column;  }
+  .content-header .headright h5 { order: 2; margin: 0; padding: 2px 0 0;}
+  .content-header .headright p { display: flex; margin-right: 15px; }
+  .content-header .headright { align-items: flex-end; justify-content: flex-end; }
+  .content .timeAccount { margin: 0 0 30px; }
+  .content .timeAccount ul li { text-align: center; }
   .row03 > [class^="col-"],
   .row03 > [class*=" col-"],
   .row04 > [class^="col-"],
   .row04 > [class*=" col-"],
   .row05 > [class^="col-"],
   .row05 > [class*=" col-"] { width: 100%; max-width: 100%; flex: 0 0 100%; }
+  .content .statusAccount { flex-wrap: wrap; }
+  .content .statusAccount li { width: 25%; }
+  .content .statusAccount li:before { display: none; }
   .strategy-chart { margin: 0 0 30px; }
-  #main-container .content { padding-bottom: 40px; }
   .row04 .blockDivergent { margin-top: 20px; }
-}
-@media only screen and (max-width: 1270px) {
-  .clocks-wrap .clock-item { margin: 0 15px 15px; }
-}
-@media only screen and (max-width: 1200px) {
-  #sidebar { width: 30%; }
-  #page-container.page-header-fixed.sidebar-o #page-header,
-  #page-container.page-header-glass.sidebar-o #page-header,
-  #page-container.sidebar-o { padding-left: 30%; }
-  #page-container.side-scroll #sidebar .content-header,
-  #page-container.side-scroll #sidebar .content-side { width: 100% !important;}
-  #main-container .content,
-  #page-footer .content { padding-left: 0.875rem; padding-right: 0.875rem; }
-  .content .timeAccount ul { padding-bottom: 20px; }
 }
 @media only screen and (max-width: 1024px) {
 
@@ -29552,21 +29597,21 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   #page-container.page-header-fixed.sidebar-o #page-header,
   #page-container.page-header-glass.sidebar-o #page-header,
   #page-container.sidebar-o { padding-left: 0; }
+  #page-footer .footer-text { margin-bottom: 10px; }
   #page-footer .footer-text a,
   #page-footer .reserved { display: inline; }
   #page-footer .footer-text { flex-direction: column; }
   #page-footer .footer-text .downloadapp { margin: 0 7.5px; }
   #page-footer { padding: 15px 0;}
   #page-footer .footer-text span { margin: 10px 0; }
-  .content-header .headright { width: 20%; justify-content: flex-start; flex-direction: row-reverse; }
-  .content-header .headuser { flex-direction: column;  }
-  .content-header .headright h5 { order: 2; margin: 0; padding: 2px 0 0;}
-  .content-header .headright p { display: none; }
-  .content-header .headleft { width: 70%; display: flex; flex-direction: row; }
-  .menuMob { display: block; margin: 0 15px 0 0; }
-  .content-header .headright button { display: block; background-color: #f76400; border: none; color: #333232; margin: 0 0 0 15px; }
-  .content-header .headright button.btn-dual:not(:disabled):not(.disabled):active { background-color: #f76400; border: none; color: #030304; }
-  #sidebar.active { width: 100%; left: 100%; }
+  #page-footer .footer-text span,
+  #page-footer .copyright { text-align: center; }
+  .content-header .headright p { flex-direction: column; }
+  .content .timeIntro { width: 50%; justify-content: center; }
+  .content .timeIntro .button { margin: 0 auto; }
+  .content .timeAccount .timeLoc { margin: 0; order: 3; width: 100%; }
+  .content .timeAccount ul { padding-top: 20px; }
+  .content .timeAccount { flex-wrap: wrap; }
 }
 
 @media only screen and (max-width: 768px) {
@@ -29575,10 +29620,23 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .buttonsAccount li { width: 100%; }
   .buttonsAccount li+li { margin-top: 15px; }
 }
+@media only screen and (max-width: 700px) {
+  .content-header .headleft { width: 80%; }
+  .content-header .headright { width: 20%; }
+  .content-header .headright p { display: none; }
+  .content .timeAccount .flip-countdown { width: auto; }
+  .clocks-wrap .clock-item { margin: 0 15px 15px; }
+}
 @media only screen and (max-width: 595px) {
   .divSpeedo { width: 270px; margin: 0 auto; text-align: center; }
+  .content-header h3 { font-size: 14px; }
+  .content-header .headerSearch .form-control { padding: 0 15px; font-size: 14px; line-height: 20px; }
 }
 @media only screen and (max-width: 480px) {
+  .content-header .headleft .menuMob button { margin: 0; }
+  .content-header .headleft .logoMob,
+  .content-header .menuDesktop,
+  .content-header .headright h5 { display: none; }
   .content .timeIntro,
   .content .flipclock-wrap { width: 100%; }
   .content .timeIntro { margin: 0 0 20px; }
@@ -29590,4 +29648,4 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .content .timeAccount ul li:nth-child(6),
   .content .statusAccount li { width: 100%; }
   
-}
+} 

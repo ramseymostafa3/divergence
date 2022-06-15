@@ -1,24 +1,28 @@
 import React from "react";
+import AccountButtons from '../../../common/AccountButtons';
 
 function SummaryButtons() {
   return (
     <div className="row row05">
       <div className="col-12 col-xl-7">
         <ul className="buttonsAccount">
-          <li>
-            <a href="javascript:;">Summary</a>
-          </li>
-          <li>
-            <a href="javascript:;">Transactions</a>
-          </li>
-          <li>
-            <a href="javascript:;" className="active">
-              Positions
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">Rick Metrics</a>
-          </li>
+          <AccountButtons
+            link={"javascript:;"}
+            label={"Summary"}
+          />
+          <AccountButtons
+            link={"javascript:;"}
+            label={"Transactions"}
+          />
+          <AccountButtons
+            link={"javascript:;"}
+            label={"Positions"}
+            active={"active"}
+          />
+          <AccountButtons
+            link={"javascript:;"}
+            label={"Rick Metrics"}
+          />
         </ul>
       </div>
     </div>

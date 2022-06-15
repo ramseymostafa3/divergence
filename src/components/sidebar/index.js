@@ -1,17 +1,17 @@
 import React from 'react';
 import Logo from '../../assets/media/photos/logo.png';
 
-function Sidebar () {
+function Sidebar (props) {
     return (
 
-      <nav id="sidebar" aria-label="Main Navigation">
+      <nav id="sidebar" aria-label="Main Navigation" className={`${props.sidebarState == true ? 'menu-open' : ''}`}>
           <div className="bg-header-dark">
             <div className="content-header">
               <a className="font-w600 text-white tracking-wide" href="index.html">
                 <img src={Logo} alt="Divergence" />
               </a>
               <div>
-                <a className="d-lg-none text-white ml-2" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
+                <a className="text-white" href="javascript:void(0)" onClick={props.togglerFunction}>
                   <i className="fa fa-times-circle"></i>
                 </a>
               </div>

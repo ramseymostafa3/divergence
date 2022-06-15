@@ -1,8 +1,8 @@
 import React from "react";
 import TimeIntro from "./TimeIntro";
 import TimeLoc from "./TimeLoc";
-import FlipClockArea from "./FlipClockArea";
 import AllClocks from "../clocks/AllClocks";
+import CountdownTimer from "./CountdownTimer";
 
 function TimeArea() {
   return (
@@ -11,7 +11,7 @@ function TimeArea() {
         <div className="timeAccount">
           <TimeIntro />
           <TimeLoc />
-          <FlipClockArea />
+          <CountdownTimer />
         </div>
       </div>
       <div className="col-12 col-xl-5">

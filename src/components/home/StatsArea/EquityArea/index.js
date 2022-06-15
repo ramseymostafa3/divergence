@@ -1,28 +1,31 @@
 import React from "react";
+import CharacterBox from '../../../common/CharacterBox';
 
 function EquityArea() {
   return (
     <div className="equity-box-main">
       <div className="equity-box">
-        <span className="character-box">
-          <span className="character">5</span>
-        </span>
-        <span className="character-box">
-          <span className="character">6</span>
-        </span>
-        <span className="character-box">
-          <span className="character">7</span>
-        </span>
-        <span className="character-box">
-          <span className="character">8</span>
-        </span>
+
+        <CharacterBox
+          character={"5"}
+        />
+        <CharacterBox
+          character={"6"}
+        />
+        <CharacterBox
+          character={"7"}
+        />
+        <CharacterBox
+          character={"8"}
+        />
         <span className="dot">.</span>
-        <span className="character-box">
-          <span className="character">9</span>
-        </span>
-        <span className="character-box">
-          <span className="character">0</span>
-        </span>
+        <CharacterBox
+          character={"9"}
+        />
+        <CharacterBox
+          character={"0"}
+        />
+        
       </div>
       <footer>
         <span className="title">EQUITY</span>

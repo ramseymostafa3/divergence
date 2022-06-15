@@ -1,45 +1,34 @@
 import React from "react";
+import Loc from '../common/Loc';
 
 function TimeLoc() {
   return (
     <div className="timeLoc">
       <ul>
-        <li>
-          <label for="zone-1" className="time-checkbox">
-            <input id="zone-1" name="time_zone" type="radio" />
-            <span className="text">Asia</span>
-          </label>
-        </li>
-        <li>
-          <label for="zone-2" className="time-checkbox">
-            <input id="zone-2" name="time_zone" type="radio" />
-            <span className="text">New York</span>
-          </label>
-        </li>
-        <li>
-          <label for="zone-3" className="time-checkbox">
-            <input id="zone-3" name="time_zone" type="radio" />
-            <span className="text">London + New York</span>
-          </label>
-        </li>
-        <li>
-          <label for="zone-4" className="time-checkbox">
-            <input id="zone-4" name="time_zone" type="radio" />
-            <span className="text">London</span>
-          </label>
-        </li>
-        <li>
-          <label for="zone-5" className="time-checkbox">
-            <input id="zone-5" name="time_zone" type="radio" />
-            <span className="text">Asia + London</span>
-          </label>
-        </li>
-        <li>
-          <label for="zone-6" className="time-checkbox">
-            <input id="zone-6" name="time_zone" type="radio" />
-            <span className="text">Best Trading Time</span>
-          </label>
-        </li>
+        <Loc
+          zone={"zone-1"}
+          country={"Asia"}
+        />
+        <Loc
+          zone={"zone-2"}
+          country={"New York"}
+        />
+        <Loc
+          zone={"zone-3"}
+          country={"London + New York"}
+        />
+        <Loc
+          zone={"zone-4"}
+          country={"London"}
+        />
+        <Loc
+          zone={"zone-5"}
+          country={"Asia + London"}
+        />
+        <Loc
+          zone={"zone-6"}
+          country={"Best Trading Time"}
+        />
       </ul>
     </div>
   );

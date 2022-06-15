@@ -2,17 +2,16 @@ import React, {useState} from 'react';
 import UserImg from '../../assets/media/photos/user.jpg';
 import Logo from '../../assets/media/photos/logo.png';
 
-function Header () {
-  const [isOpen, setIsOpen] = useState(false);
-  function navbarToggler() {
-    setIsOpen(!isOpen);
-  }
+function Header (props) {
   return (
         <header id="page-header">
             <div className="content-header">
               
                 <div className="headleft">
                   <div class="menuMob">
+                    <button type="button" class="btn btn-dual" onClick={props.togglerFunction} data-toggle="layout" data-action="sidebar">
+                      <i class="fa fa-fw fa-bars"></i>
+                    </button>
                     <a className="logoMob" href="javascript:void(0)">
                       <img src={Logo} alt="Divergence" />
                     </a>
@@ -31,9 +30,7 @@ function Header () {
                 </div>
               
                 <div className="headright">
-                  <button type="button" class="btn btn-dual" onClick={navbarToggler} data-toggle="layout" data-action="sidebar">
-                    <i class="fa fa-fw fa-bars"></i>
-                  </button>
+                  
                   <p>Strategy: <span>Conservative</span></p>
                   <div class="headuser">
                     <h5>Grace Brown</h5>

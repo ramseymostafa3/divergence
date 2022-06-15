@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import Header from "./components/header";
 import TimeArea from "./components/home/TimeArea";
@@ -12,13 +12,17 @@ import "./App.css";
 import HomeInfoSection from "./components/home/HomeInfoSection";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const navbarToggler = () => {
+    setIsOpen(!isOpen);
+  }
   return (
     <div
       id="page-container"
-      className="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow"
+      className="sidebar-dark page-header-fixed main-content-narrow"
     >
-      <Sidebar />
-      <Header />
+      <Sidebar sidebarState={isOpen} togglerFunction={navbarToggler} />
+      <Header togglerFunction={navbarToggler} />
 
       <main id="main-container">
         <div className="content">

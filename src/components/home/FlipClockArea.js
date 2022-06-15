@@ -22,11 +22,11 @@ function FlipClockArea() {
             type: "seconds",
             title: "SS",
           },
-          {
-            sep: "",
-            type: "miliseconds",
-            title: "MS",
-          },
+          // {
+          //   sep: "",
+          //   type: "miliseconds",
+          //   title: "MS",
+          // },
         ]}
       />
     </div>
