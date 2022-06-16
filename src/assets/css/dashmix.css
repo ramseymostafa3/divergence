@@ -29643,7 +29643,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .content-header .headright p { display: flex; margin-right: 15px; }
   .content-header .headright { align-items: flex-end; justify-content: flex-end; }
   .content .timeAccount { margin: 0 0 30px; justify-content: space-between; }
-  .content .timeAccount ul li { text-align: center; }
+  /* .content .timeAccount ul li { text-align: center; } */
   .row03 > [class^="col-"],
   .row03 > [class*=" col-"],
   .row04 > [class^="col-"],
@@ -29655,6 +29655,8 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .content .statusAccount li:before { display: none; }
   .strategy-chart { margin: 0 0 30px; }
   .row04 .blockDivergent { margin-top: 20px; }
+  .blockDivergent ul.author { justify-content: flex-start; }
+  .blockDivergent ul.author li:nth-child(2) { margin: 0 10px; }
 }
 @media only screen and (max-width: 1024px) {
 }
@@ -29675,7 +29677,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .content .timeIntro { width: 50%; justify-content: center; }
   .content .timeIntro .buttons button { margin: 0 auto; }
   .content .timeAccount .timeLoc { margin: 0; order: 3; width: 100%; }
-  .content .timeAccount ul { padding-top: 20px; }
+  .content .timeAccount ul { padding-top: 20px; max-width: 600px; margin: 0 auto; }
+  .content .timeAccount ul li,
+  .content .timeAccount ul li:nth-child(2),
+  .content .timeAccount ul li:nth-child(3),
+  .content .timeAccount ul li:nth-child(4),
+  .content .timeAccount ul li:nth-child(5),
+  .content .timeAccount ul li:nth-child(6) { width: 33.33%; }
   .content .timeAccount { flex-wrap: wrap; }
   .stopwatch { width: 50%; }
 }
@@ -29705,6 +29713,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .content .timeIntro,
   .content .flipclock-wrap { width: 100%; }
   .content .timeIntro { margin: 0 0 20px; }
+  .content .timeAccount ul { display: table; }
   .content .timeAccount ul li,
   .content .timeAccount ul li:nth-child(2),
   .content .timeAccount ul li:nth-child(3),

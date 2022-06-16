@@ -29,6 +29,8 @@ export const options = {
       align: "end",
       labels: {
         color: "rgb(255,255,255)",
+        boxWidth: 10,
+        boxHeight: 6,
       },
     },
     title: {
@@ -59,6 +61,20 @@ export const data = {
       label: "Cumulative Profit",
       data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
       borderColor: "rgb(53, 162, 235)",
+      fillColor: "rgb(53, 162, 235)",
+      backgroundColor: "rgb(255,255,255)",
+    },
+    {
+      label: "Performance Return %",
+      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      borderColor: "rgb(227, 159, 27)",
+      fillColor: "rgb(53, 162, 235)",
+      backgroundColor: "rgb(255,255,255)",
+    },
+    {
+      label: "Cumulative Return %",
+      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      borderColor: "rgb(255, 0, 0)",
       fillColor: "rgb(53, 162, 235)",
       backgroundColor: "rgb(255,255,255)",
     },
