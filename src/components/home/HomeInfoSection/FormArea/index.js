@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import FormField from '../../../common/FormField';
 
 function FormArea() {
@@ -17,7 +17,7 @@ function FormArea() {
           icon={"fas fa-calendar-alt"}
           type="date"
           fieldclass={"form-control"}
-          placeholder={"Start Date"}
+          placeholder={""}
         />
         <FormField
           column={"col-md-6"}
@@ -31,7 +31,7 @@ function FormArea() {
           icon={"fas fa-calendar-alt"}
           type="date"
           fieldclass={"form-control"}
-          placeholder={"End Date"}
+          placeholder={""}
         />
         <div className="col-md-12">
           <button className="submit" type="submit">

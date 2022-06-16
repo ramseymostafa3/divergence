@@ -30,3 +30,25 @@
   src: url('./assets/fonts/digital-7/digital-7-italic.woff') format('woff');
 }
 
+.input-container input {
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+  padding: .75rem;
+  position: relative;
+  width: 100%;
+}
+
+
+.input-container input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}

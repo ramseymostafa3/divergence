@@ -11,11 +11,13 @@ import "./assets/css/dashmix.css";
 import "./App.css";
 import HomeInfoSection from "./components/home/HomeInfoSection";
 
+
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const navbarToggler = () => {
     setIsOpen(!isOpen);
   }
+  const duration = {hours:1, minutes: 20, seconds: 40, milliseconds: 999};
   return (
     <div
       id="page-container"
