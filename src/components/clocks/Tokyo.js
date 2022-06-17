@@ -1,25 +1,26 @@
-import React from 'react';
-import AnalogueClock from 'react-analogue-clock';
+import React, { useEffect, useState } from 'react';
+import Clock from 'react-clock';
+import 'react-clock/dist/Clock.css';
+import moment from 'moment-timezone';
 
 function Tokyo () {
-    const clockOptions = {
-        baseColor: '#ffffff',
-        borderColor: '#000000',
-        borderWidth: 5,
-        centerColor: '#000000',
-        handColors: {
-            hour: '#000000',
-            minute: '#000000',
-            second: '#000000',
-        },
-        notchColor: '#000000',
-        numbersColor: '#000000',
-        showNumbers: false,
-        size: 300,
-    }
+    const [time, setTime] = useState(new Date());
+    const [tokyoTime, setTokyoTime] = useState(time.toLocaleTimeString())
+
+    useEffect(() => {
+        const timerId = setInterval(()=>{
+            setTime(new Date());
+            let currentTime = moment(new Date());
+            setTokyoTime(currentTime.tz('Asia/Tokyo').format('LTS'));
+        }, 1000);
+        return () => {
+            clearInterval(timerId);
+        };
+    }, []);
+
     return (
         <div className="clock-item">
-            <AnalogueClock {...clockOptions} />
+            <Clock size="111" value={tokyoTime}/>
             <label>Tokyo</label>
         </div>
     );

@@ -3,8 +3,8 @@ import VerticalProgress from '../../../common/VerticalProgress';
 
 function MonetryWinLoss() {
   return (
-    <div class="divMonetry">
-      <div class="progMonetry">
+    <div className="divMonetry">
+      <div className="progMonetry">
         <VerticalProgress
           barStyle={{ backgroundColor: "#6f51ff" }}
           progress={"30"}

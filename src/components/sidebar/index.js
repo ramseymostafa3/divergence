@@ -22,7 +22,7 @@ function Sidebar (props) {
             <div className="content-side">
               <ul className="nav-main">
                 <li className="nav-main-item">
-                  <a className="nav-main-link active" href="index.html">
+                  <a className="nav-main-link" href="javascript:;">
                     <i className="nav-main-link-icon fa fa-user-secret "></i>
                     <span className="nav-main-link-name">Traider</span>
                   </a>

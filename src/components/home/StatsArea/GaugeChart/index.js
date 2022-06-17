@@ -3,7 +3,7 @@ import ReactSpeedometer from "react-d3-speedometer";
 
 function GaugeChart() {
   return (
-    <div class="divSpeedo">
+    <div className="divSpeedo">
       <div
         style={{
           width: "100%",

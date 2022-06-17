@@ -8,9 +8,9 @@ function Header (props) {
             <div className="content-header">
               
                 <div className="headleft">
-                  <div class="menuMob">
-                    <button type="button" class="btn btn-dual" onClick={props.togglerFunction} data-toggle="layout" data-action="sidebar">
-                      <i class="fa fa-fw fa-bars"></i>
+                  <div className="menuMob">
+                    <button type="button" className="btn btn-dual" onClick={props.togglerFunction} data-toggle="layout" data-action="sidebar">
+                      <i className="fa fa-fw fa-bars"></i>
                     </button>
                     <a className="logoMob" href="javascript:void(0)">
                       <img src={Logo} alt="Divergence" />
@@ -32,7 +32,7 @@ function Header (props) {
                 <div className="headright">
                   
                   <p>Strategy: <span>Conservative</span></p>
-                  <div class="headuser">
+                  <div className="headuser">
                     <h5>Grace Brown</h5>
                     <a className="img-link mr-1" href="javascript:;">
                       <img className="img-avatar" src={UserImg} alt="" />

@@ -43,6 +43,32 @@ export const options = {
       },
     },
   },
+  scales: {
+    y: {
+      title: {
+        display: true,
+        text: 'PROFIT',
+        color: "#fff"
+      },
+      type: 'linear',
+      display: true,
+      position: 'left',
+      labelString: 'probability'
+    },
+    y1: {
+      title: {
+        display: true,
+        text: 'RETURN',
+        color: "#fff"
+      },
+      type: 'linear',
+      display: true,
+      position: 'right',
+      grid: {
+        drawOnChartArea: false,
+      },
+    },
+  },
 };
 
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
@@ -65,7 +91,7 @@ export const data = {
       backgroundColor: "rgb(255,255,255)",
     },
     {
-      label: "Performance Return %",
+      label: "Return %",
       data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
       borderColor: "rgb(227, 159, 27)",
       fillColor: "rgb(53, 162, 235)",

@@ -10,14 +10,14 @@ function Footer () {
                 <div className="col-lg-9">
                   <div className="footer-text">
                     <span>Be the first to get the latest AI innovations in spread trading. <a href="javascript:;">Register for the App.</a></span>
-                    <div class="footerButtons">
+                    <div className="footerButtons">
                       <a href="javascript:;" className="downloadapp"><img src={Appstore} alt="App store" /></a>
                       <a href="javascript:;" className="downloadapp"><img src={Playstore} alt="Google Play" /></a>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-3 copyright">
-                  &copy; <span data-toggle="year-copy"></span> Divergence Capital. <span class="reserved">All rights reserved.</span>
+                  &copy; <span data-toggle="year-copy"></span> Divergence Capital. <span className="reserved">All rights reserved.</span>
                 </div>
               </div>
             </div>

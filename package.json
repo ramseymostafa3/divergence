@@ -3,22 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@pqina/flip": "^1.7.7",
-    "@rumess/react-flip-countdown": "^1.2.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "chart.js": "^3.8.0",
     "faker": "5.5.3",
+    "moment-timezone": "^0.5.34",
     "react": "^18.1.0",
     "react-analogue-clock": "^0.3.2",
     "react-chartjs-2": "^4.2.0",
+    "react-clock": "^3.1.0",
     "react-d3-speedometer": "^1.0.2",
     "react-dom": "^18.1.0",
+    "react-moment": "^1.1.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4",
-    "x-react-flipclock": "^0.1.184153"
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/faker": "5.5.3",
