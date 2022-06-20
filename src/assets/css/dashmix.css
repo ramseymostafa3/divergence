@@ -29613,6 +29613,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   border: 1px solid #464646;
   border-top: none;
 }
+.strategy-chart-responsive h6 {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 @media only screen and (max-width: 1270px) {
   .equity-box .character,
   .equity-box .dot,
@@ -29679,6 +29686,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   .content .timeAccount ul li:nth-child(6) { width: 33.33%; }
   .content .timeAccount { flex-wrap: wrap; }
   .stopwatch { width: 50%; }
+  .strategy-chart { padding: 15px; }
 }
 @media only screen and (max-width: 768px) {
   .content .statusAccount li { width: 50%; }

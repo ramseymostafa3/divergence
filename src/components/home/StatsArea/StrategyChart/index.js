@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -71,6 +71,56 @@ export const options = {
   },
 };
 
+export const responsiveOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false,
+      align: "center",
+      labels: {
+        color: "rgb(255,255,255)",
+        boxWidth: 10,
+        boxHeight: 6,
+      },
+    },
+    title: {
+      display: false,
+      text: "STRATEGY PERFORMANCE",
+      align: "start",
+      color: "#fff",
+      padding: {
+        bottom: -15,
+      },
+    },
+  },
+  scales: {
+    y: {
+      title: {
+        display: false,
+        text: 'PROFIT',
+        color: "#fff"
+      },
+      type: 'linear',
+      display: true,
+      position: 'left',
+      labelString: 'probability'
+    },
+    y1: {
+      title: {
+        display: false,
+        text: 'RETURN',
+        color: "#fff"
+      },
+      type: 'linear',
+      display: true,
+      position: 'right',
+      grid: {
+        drawOnChartArea: false,
+      },
+    },
+  },
+};
+
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
 
 export const data = {
@@ -106,11 +156,27 @@ export const data = {
     },
   ],
 };
-
 function StrategyChart() {
+
+  const [winWidth, setWinWidth] = useState(0);
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      const newWidth = window.innerWidth;
+      setWinWidth(newWidth);
+      console.log(winWidth)
+    }
+    window.addEventListener("load", checkWindowWidth);
+    window.addEventListener("resize", checkWindowWidth);
+
+    return () => {
+      window.addEventListener("load", checkWindowWidth);
+      window.removeEventListener("resize", checkWindowWidth)
+    }
+  }, [])
   return (
     <div className="strategy-chart">
-      <Line options={options} data={data} />
+      {winWidth > 992 ? (<Line options={options} data={data} />) : (<div className="strategy-chart-responsive"><h6>STRATEGY PERFORMANCE</h6> <Line options={responsiveOptions} data={data} /></div>)}
     </div>
   );
 }
