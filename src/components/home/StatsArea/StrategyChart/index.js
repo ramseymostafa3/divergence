@@ -74,9 +74,11 @@ export const options = {
 
 export const responsiveOptions = {
   responsive: true,
+  aspectRatio: 1.5,
+  maintainAspectRatio: true,
   plugins: {
     legend: {
-      display: false,
+      display: true,
       align: "center",
       labels: {
         color: "rgb(255,255,255)",
@@ -157,6 +159,7 @@ export const data = {
     },
   ],
 };
+
 function StrategyChart() {
 
   const [winWidth, setWinWidth] = useState(0);
@@ -165,7 +168,6 @@ function StrategyChart() {
     const checkWindowWidth = () => {
       const newWidth = window.innerWidth;
       setWinWidth(newWidth);
-      console.log(winWidth)
     }
     window.addEventListener("load", checkWindowWidth);
     window.addEventListener("resize", checkWindowWidth);
@@ -177,7 +179,7 @@ function StrategyChart() {
   }, [])
   return (
     <div className="strategy-chart">
-      {winWidth > 992 ? (<Line options={options} data={data} />) : (<div className="strategy-chart-responsive"><h6>STRATEGY PERFORMANCE</h6><ul><li><span class="orange"></span>Profit</li><li><span class="blue"></span>Cumulative Profit</li><li><span class="yellow"></span>Return %</li><li><span class="red"></span>Cumulative Return %</li></ul><Line options={responsiveOptions} data={data} /></div>)}
+      {winWidth > 700 ? (<Line options={options} data={data} />) : (<div className="strategy-chart-responsive"><h6>STRATEGY PERFORMANCE</h6><Line options={responsiveOptions} data={data} /></div>)}
     </div>
   );
 }
