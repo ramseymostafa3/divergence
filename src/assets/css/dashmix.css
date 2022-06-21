@@ -29620,6 +29620,47 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   font-weight: 500;
   margin-bottom: 10px;
 }
+.strategy-chart-responsive ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.strategy-chart-responsive ul li {
+  font-size: 12px;
+  line-height: 20px;
+  color: #a1a1a1;
+  position: relative;
+  padding: 0 0 0 17px;
+}
+.strategy-chart-responsive ul li+li {
+  margin-left: 20px;
+}
+.strategy-chart-responsive ul li span {
+  background-color: #fff;
+  display: block;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 7.5px;
+  left: 0;
+}
+.strategy-chart-responsive ul li span.orange {
+  background-color: #f76400;
+}
+.strategy-chart-responsive ul li span.blue {
+  background-color: #6f51ff;
+}
+.strategy-chart-responsive ul li span.yellow {
+  background-color: #e39f1b;
+}
+.strategy-chart-responsive ul li span.red {
+  background-color: #ff0000;
+}
 @media only screen and (max-width: 1270px) {
   .equity-box .character,
   .equity-box .dot,
