@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AccountButtons = ({ link, label, active }) => {
   return (
-    <li><a href={`${link}`} className={`${active}`}>{label}</a></li>
+    <li><Link to={`${link}`} className={`${active}`}>{label}</Link></li>
   );
 };
 

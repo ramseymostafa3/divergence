@@ -1,5 +1,5 @@
 import React from "react";
-import StatLevel from '../../../common/StatLevel';
+import StatLevel from 'components/common/StatLevel';
 
 function Stats() {
   return (

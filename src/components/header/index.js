@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import UserImg from '../../assets/media/photos/user.jpg';
-import Logo from '../../assets/media/photos/logo.png';
+import UserImg from 'assets/media/user.jpg';
+import Logo from 'assets/media/logo.png';
 
 function Header (props) {
   return (

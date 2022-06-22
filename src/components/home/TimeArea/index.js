@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TimeLoc from "./TimeLoc";
-import AllClocks from "../../clocks/AllClocks";
+import AllClocks from "components/clocks/AllClocks";
 
 function TimeArea() {
   const [time, setTime] = useState(0);

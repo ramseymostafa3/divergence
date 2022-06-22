@@ -1,5 +1,5 @@
 import React from "react";
-import Loc from '../../common/Loc';
+import Loc from 'components/common/Loc';
 
 function TimeLoc() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import VerticalProgress from '../../../common/VerticalProgress';
+import VerticalProgress from 'components/common/VerticalProgress';
 
 function MonetryWinLoss() {
   return (

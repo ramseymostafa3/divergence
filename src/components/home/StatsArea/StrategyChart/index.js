@@ -11,7 +11,6 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import faker from "faker";
-import { nodeModuleNameResolver } from "typescript";
 
 ChartJS.register(
   CategoryScale,

@@ -1,5 +1,5 @@
 import React from "react";
-import AccountButtons from '../../../common/AccountButtons';
+import AccountButtons from 'components/common/AccountButtons';
 
 function SummaryButtons() {
   return (
@@ -11,7 +11,7 @@ function SummaryButtons() {
             label={"Summary"}
           />
           <AccountButtons
-            link={"javascript:;"}
+            link={"transactions"}
             label={"Transactions"}
           />
           <AccountButtons

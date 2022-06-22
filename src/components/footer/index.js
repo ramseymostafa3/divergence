@@ -1,6 +1,6 @@
 import React from 'react';
-import Appstore from '../../assets/media/photos/appstore.png';
-import Playstore from '../../assets/media/photos/googleplay.png';
+import Appstore from 'assets/media/appstore.png';
+import Playstore from 'assets/media/googleplay.png';
 
 function Footer () {
     return (

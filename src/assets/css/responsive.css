@@ -1,0 +1,316 @@
+@media only screen and (max-width: 1270px) {
+
+  .equity-box .character,
+  .equity-box .dot,
+  .equity-box .character-box:before {
+    font-size: 48px;
+  }
+
+  .equity-box .character-box {
+    min-width: 28px;
+  }
+
+  .rowStat .label {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  #page-footer .footer-text a,
+  #page-footer .reserved {
+    display: block;
+  }
+
+  #page-footer .footer-text .downloadapp>img {
+    max-width: 120px;
+  }
+
+  .content-header h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .content-header .headerSearch {
+    width: 90%;
+  }
+
+  .content-header .headright h5 {
+    margin: 0 10px 0 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .content-header .headright p {
+    font-size: 12px;
+  }
+
+  .img-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content-header .menuDesktop {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-header h3 {
+    margin: 0 0 5px;
+  }
+
+  .content-header .headuser {
+    flex-direction: column;
+  }
+
+  .content-header .headright h5 {
+    order: 2;
+    margin: 0;
+    padding: 2px 0 0;
+  }
+
+  .content-header .headright p {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  .content-header .headright {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .content .timeAccount {
+    margin: 0 0 30px;
+    justify-content: space-between;
+  }
+
+  /* .content .timeAccount ul li { text-align: center; } */
+  .row03>[class^="col-"],
+  .row03>[class*=" col-"],
+  .row04>[class^="col-"],
+  .row04>[class*=" col-"],
+  .row05>[class^="col-"],
+  .row05>[class*=" col-"] {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .content .statusAccount {
+    flex-wrap: wrap;
+  }
+
+  .content .statusAccount li {
+    width: 25%;
+  }
+
+  .content .statusAccount li:before {
+    display: none;
+  }
+
+  .strategy-chart {
+    margin: 0 0 30px;
+  }
+
+  .row04 .blockDivergent {
+    margin-top: 20px;
+  }
+
+  .blockDivergent ul.author {
+    justify-content: flex-start;
+  }
+
+  .blockDivergent ul.author li:nth-child(2) {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 992px) {
+
+  #page-container.page-header-fixed.sidebar-o #page-header,
+  #page-container.page-header-glass.sidebar-o #page-header,
+  #page-container.sidebar-o {
+    padding-left: 0;
+  }
+
+  #page-footer .footer-text {
+    margin-bottom: 10px;
+  }
+
+  #page-footer .footer-text a,
+  #page-footer .reserved {
+    display: inline;
+  }
+
+  #page-footer .footer-text {
+    flex-direction: column;
+  }
+
+  #page-footer .footer-text .downloadapp {
+    margin: 0 7.5px;
+  }
+
+  #page-footer {
+    padding: 15px 0;
+  }
+
+  #page-footer .footer-text span {
+    margin: 10px 0;
+  }
+
+  #page-footer .footer-text span,
+  #page-footer .copyright {
+    text-align: center;
+  }
+
+  .content-header .headright p {
+    flex-direction: column;
+  }
+
+  .content .timeIntro {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .content .timeIntro .buttons button {
+    margin: 0 auto;
+  }
+
+  .content .timeAccount .timeLoc {
+    margin: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .content .timeAccount ul {
+    padding-top: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .content .timeAccount ul li,
+  .content .timeAccount ul li:nth-child(2),
+  .content .timeAccount ul li:nth-child(3),
+  .content .timeAccount ul li:nth-child(4),
+  .content .timeAccount ul li:nth-child(5),
+  .content .timeAccount ul li:nth-child(6) {
+    width: 33.33%;
+  }
+
+  .content .timeAccount {
+    flex-wrap: wrap;
+  }
+
+  .stopwatch {
+    width: 50%;
+  }
+
+  .strategy-chart {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content .statusAccount li {
+    width: 50%;
+  }
+
+  .buttonsAccount {
+    flex-wrap: wrap;
+  }
+
+  .buttonsAccount li {
+    width: 100%;
+  }
+
+  .buttonsAccount li+li {
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .content-header .headleft {
+    width: 80%;
+  }
+
+  .content-header .headright {
+    width: 20%;
+  }
+
+  .content-header .headright p {
+    display: none;
+  }
+
+  .content .timeAccount .flip-countdown {
+    width: auto;
+  }
+
+  .clocks-wrap .clock-item {
+    margin: 0 15px 15px;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .divSpeedo {
+    width: 270px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .content-header h3 {
+    font-size: 14px;
+  }
+
+  .content-header .headerSearch .form-control {
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content-header .headleft .menuMob button {
+    margin: 0;
+  }
+
+  .content-header .headleft .logoMob,
+  .content-header .menuDesktop,
+  .content-header .headright h5 {
+    display: none;
+  }
+
+  .content .timeIntro,
+  .content .flipclock-wrap {
+    width: 100%;
+  }
+
+  .content .timeIntro {
+    margin: 0 0 20px;
+  }
+
+  .content .timeAccount ul {
+    display: table;
+  }
+
+  .content .timeAccount ul li,
+  .content .timeAccount ul li:nth-child(2),
+  .content .timeAccount ul li:nth-child(3),
+  .content .timeAccount ul li:nth-child(4),
+  .content .timeAccount ul li:nth-child(5),
+  .content .timeAccount ul li:nth-child(6),
+  .content .statusAccount li,
+  .stopwatch {
+    width: 100%;
+  }
+}
+@media(min-width: 576px) {
+  .bpbg-content {width: 70%;}
+}
+@media(min-width: 1440px) {
+  .bpbg-content {width: 50%;}
+}

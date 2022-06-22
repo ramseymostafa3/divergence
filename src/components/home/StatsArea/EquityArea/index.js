@@ -1,5 +1,5 @@
 import React from "react";
-import CharacterBox from '../../../common/CharacterBox';
+import CharacterBox from 'components/common/CharacterBox';
 
 function EquityArea() {
   return (

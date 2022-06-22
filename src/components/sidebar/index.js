@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/media/photos/logo.png';
+import Logo from 'assets/media/logo.png';
 
 function Sidebar (props) {
     return (

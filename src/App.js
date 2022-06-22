@@ -1,41 +1,21 @@
-import React, {useState} from "react";
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from "./components/header";
-import TimeArea from "./components/home/TimeArea";
-import HomeSectionTwo from "./components/home/HomeSectionTwo";
-import Sidebar from "./components/sidebar";
-import Footer from "./components/footer";
-import StatsArea from "./components/home/StatsArea";
+import Home from "pages/home";
+import Transactions from "pages/transactions";
 
-import "./assets/css/dashmix.css";
-import "./App.css";
-import HomeInfoSection from "./components/home/HomeInfoSection";
-
+import "assets/css/dashmix.css";
+import "assets/css/responsive.css";
+import "App.css";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const navbarToggler = () => {
-    setIsOpen(!isOpen);
-  }
-  const duration = {hours:1, minutes: 20, seconds: 40, milliseconds: 999};
   return (
-    <div
-      id="page-container"
-      className="sidebar-dark page-header-fixed main-content-narrow"
-    >
-      <Sidebar sidebarState={isOpen} togglerFunction={navbarToggler} />
-      <Header togglerFunction={navbarToggler} />
-
-      <main id="main-container">
-        <div className="content">
-          <TimeArea />
-          <HomeSectionTwo />
-          <StatsArea />
-          <HomeInfoSection />
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path={"/"} element={<Home />} />
+        <Route exact path={"/transactions"} element={<Transactions />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
