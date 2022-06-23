@@ -7,6 +7,7 @@ import Footer from "components/footer";
 import PageTopbar from 'components/common/PageTopbar';
 import TransactionsRecord from 'components/transactions/TransactionsRecord';
 import TransactionsInfoSection from 'components/transactions/TransactionsInfoSection';
+import TransactionsStats from 'components/transactions/TransactionsStats';
 
 function Transactions() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,8 +25,15 @@ function Transactions() {
       <main id="main-container">
         <div className="content">
           <PageTopbar title={"Transactions"} />
+
+          <TransactionsStats />
           <TransactionsRecord />
           <TransactionsInfoSection />
+          <ul className='pagination'>
+            <li><i class="fas fa-angle-left"></i></li>
+            <li className='active'><span>1</span></li>
+            <li><i class="fas fa-angle-right"></i></li>
+          </ul>
         </div>
       </main>
       <Footer />

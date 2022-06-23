@@ -2343,6 +2343,14 @@ input[type="month"].form-control {
   -moz-appearance: none;
   appearance: none;
 }
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
 select.form-control:focus::-ms-value {
   color: #495057;
@@ -32017,7 +32025,9 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divergence-table tbody td {
   color: #fff;
 }
-
+.divergence-table tbody td.success-text {
+  color: #00e396;
+}
 .divergence-table tbody td:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -32037,4 +32047,76 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 
 .success-text {
   color: #00e396;
+}
+.divTransaction {
+
+}
+.divTransaction .fieldWrapper {
+  margin: 0 0 20px;
+}
+.divTransaction .fieldWrapper label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #f76400;
+  display: block;
+  margin: 0 0 5px;
+  padding: 0;
+}
+.divTransaction .fieldWrapper input {
+  width: 100%;
+  background-color: #2e2e2e;
+  border: none;
+  border: 1px solid #393939;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding: 10px 20px;
+  height: auto;
+}
+.divTransaction .fieldWrapper input.orange {
+  color: #f15200;
+}
+.divTransaction .fieldWrapper input.green {
+  color: #00e396;
+}
+.divTransaction h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f15200;
+  margin: 0;
+}
+.divTransaction p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+ul.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+ul.pagination > li {
+  background-color: #2e2e2e;
+  border: 1px solid #484848;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 36px;
+  color: #fff;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  margin: 20px 0 30px;
+  cursor: pointer;
+}
+ul.pagination > li+li {
+  margin-left: 10px;
+}
+ul.pagination > li.active {
+  background-color: #f15200;
 }
