@@ -32063,6 +32063,34 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   margin: 0 0 5px;
   padding: 0;
 }
+.selectBox > div {
+  width: 100%;
+  background-color: #2e2e2e;
+  border: none;
+  border: 1px solid #393939;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding: 4px 6px;
+  height: auto;
+}
+.selectBox > div:hover {
+  border-color: #fff;
+}
+.selectBox .css-qc6sy-singleValue {
+  color: #f15200;
+}
+.selectBox #react-select-3-listbox {
+  color: #fff;
+}
+.selectBox #react-select-3-listbox div > div {
+  background-color: transparent;
+  border-radius: 7px;
+}
+.selectBox #react-select-3-listbox div > div:hover {
+  background-color: #f15200;
+}
 .divTransaction .fieldWrapper input {
   width: 100%;
   background-color: #2e2e2e;

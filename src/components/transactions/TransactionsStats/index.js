@@ -1,19 +1,28 @@
-import React from 'react'
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import Select from 'react-select'
 
 function TransactionsStats() {
+    const [startDate, setStartDate] = useState(new Date());
+    const options = [
+      { value: 'USD_JPY', label: 'USD_JPY' },
+      { value: 'EUR', label: 'EUR' },
+      { value: 'GBP', label: 'GBP' }
+    ]
     return (
         <div className='divTransaction'>
             <div className='row align-items-center'>
                 <div className='col-12 col-lg-4'>
                   <div class="fieldWrapper">
                     <label>Date</label>
-                    <input type='date' class='form-control' placeholder='2022' value='2022' />
+                    <DatePicker selected={startDate} onChange={(date:Date) => setStartDate(date)} />
                   </div>
                 </div>
                 <div className='col-12 col-lg-4'>
                   <div class="fieldWrapper">
                     <label>Epic</label>
-                    <input type='text' class='form-control orange' placeholder='USD_JPY' value='' />
+                    <Select className="selectBox" options={options} />
                   </div>
                 </div>
                 <div className='col-12 col-lg-4'>
