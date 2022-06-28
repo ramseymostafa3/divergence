@@ -15,9 +15,8 @@ function SummaryButtons() {
             label={"Transactions"}
           />
           <AccountButtons
-            link={"javascript:;"}
+            link={"positions"}
             label={"Positions"}
-            active={"active"}
           />
           <AccountButtons
             link={"javascript:;"}

@@ -18,6 +18,7 @@ function GaugeChart() {
           segments={10}
         />
       </div>
+      <h5>Drawdown</h5>
     </div>
   );
 }

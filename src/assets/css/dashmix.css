@@ -16025,10 +16025,7 @@ a.badge-secondary.focus {
 }
 
 .buttonsAccount li a:hover {
-  background-color: rgba(46, 46, 46, 1);
-}
-
-.buttonsAccount li a.active {
+  /* background-color: rgba(46, 46, 46, 1); */
   background-color: #f15200;
   color: #fff;
 }
@@ -31813,7 +31810,17 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divSpeedo {
   width: 100%;
 }
-
+.divSpeedo h5 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  display: table;
+  margin: 0 auto;
+}
 .stopwatch .numbers {
   display: flex;
   flex-direction: row;
@@ -32025,8 +32032,18 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divergence-table tbody td {
   color: #fff;
 }
-.divergence-table tbody td.success-text {
+.divergence-table tbody td.success-text,
+.divergence-table tbody td.green {
   color: #00e396;
+}
+.divergence-table tbody td.red {
+  color: #fa1d1d;
+}
+.divergence-table tbody td.action {
+  color: #f6ae7e;
+}
+.divergence-table tbody td.action i:nth-child(even) {
+  margin: 0 5px;
 }
 .divergence-table tbody td:first-child {
   border-top-left-radius: 10px;
@@ -32044,7 +32061,12 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   font-weight: 300;
   border: 0;
 }
-
+.divergence-table .mw-160 {
+  min-width: 160px;
+}
+.divergence-table .mw-120 {
+  min-width: 120px;
+}
 .success-text {
   color: #00e396;
 }
@@ -32147,4 +32169,33 @@ ul.pagination > li+li {
 }
 ul.pagination > li.active {
   background-color: #f15200;
+}
+
+.react-tabs__tab-list { 
+  border-bottom: none;
+  display: flex;
+}
+.react-tabs__tab {
+  display: block;
+  background-color: rgba(46, 46, 46, 0.7);
+  border: 1px solid #393939;
+  border-radius: 10px;
+  padding: 7px 15px;
+  margin: 0 15px 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 120px;
+}
+.react-tabs__tab--selected,
+.react-tabs__tab:hover {
+  background-color: #f15200;
+  color: #fff;
+}
+.react-tabs__tab--selected:before,
+.react-tabs__tab--selected:after {
+  display: none;
 }

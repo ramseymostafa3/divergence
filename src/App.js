@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from "pages/home";
 import Transactions from "pages/transactions";
+import Positions from "pages/positions";
 
 import "assets/css/dashmix.css";
 import "assets/css/responsive.css";
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route exact path={"/"} element={<Home />} />
         <Route exact path={"/transactions"} element={<Transactions />} />
+        <Route exact path={"/positions"} element={<Positions />} />
       </Routes>
     </BrowserRouter>
   );
