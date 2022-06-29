@@ -32060,12 +32060,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   font-size: 12.86px;
   font-weight: 300;
   border: 0;
+  padding: 0.5rem;
 }
 .divergence-table .mw-160 {
   min-width: 160px;
 }
 .divergence-table .mw-120 {
-  min-width: 120px;
+  min-width: 100px;
 }
 .success-text {
   color: #00e396;
