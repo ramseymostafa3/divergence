@@ -7,7 +7,7 @@ function SummaryButtons() {
       <div className="col-12 col-xl-7">
         <ul className="buttonsAccount">
           <AccountButtons
-            link={"javascript:;"}
+            link={"summary"}
             label={"Summary"}
           />
           <AccountButtons

@@ -15840,6 +15840,15 @@ a.badge-secondary.focus {
   box-shadow: none
 }
 
+.blockDivergent label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f76400;
+  text-align: center;
+  width: 100%;
+}
+
 .blockDivergent .fieldContainer input[type="date"] {
   /* border: none;
   box-sizing: border-box;
@@ -15904,7 +15913,7 @@ a.badge-secondary.focus {
 .blockDivergent h2,
 .bpbg-content h2 {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.5px;
   color: #f76400;
@@ -32024,6 +32033,9 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   color: #f76400;
 }
 
+.divergence-table thead.upperCase th {
+  text-transform: uppercase;
+}
 .divergence-table tbody tr {
   border: 1px solid #484848;
   background-color: rgba(46, 46, 46, 0.702);
@@ -32038,6 +32050,18 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 }
 .divergence-table tbody td.red {
   color: #fa1d1d;
+}
+.divergence-table tbody td.yellow {
+  color: #ffde00;
+}
+.divergence-table tbody td.pale {
+  color: #fbf971;
+}
+.divergence-table tbody td.orange {
+  color: #f76400;
+}
+.divergence-table tbody td.blue {
+  color: #509bf8;
 }
 .divergence-table tbody td.action {
   color: #f6ae7e;
@@ -32199,4 +32223,30 @@ ul.pagination > li.active {
 .react-tabs__tab--selected:before,
 .react-tabs__tab--selected:after {
   display: none;
+}
+
+.rowCompany {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+}
+.rowCompany .colCompany {
+  background-color: rgba(46, 46, 46, 0.7);
+  border: 1px solid #393939;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 0 10px;
+  padding: 15px 10px;
+}
+.colTable .divergence-table,
+.colTable .table,
+.colTable table {
+  margin-bottom: 0;
 }
