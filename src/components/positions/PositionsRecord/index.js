@@ -290,9 +290,7 @@ function PositionsRecord() {
     </Tabs> 
 
 </div>
-   
-            
-        
+    
     )
 }
 

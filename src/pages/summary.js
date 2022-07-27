@@ -6,6 +6,7 @@ import Footer from "components/footer";
 
 import PageTopbar from 'components/common/PageTopbar';
 
+import SummaryCharts from "components/summary/SummaryCharts";
 import SummaryTables from "components/summary/SummaryTables";
 import SummaryCompanies from "components/summary/SummaryCompanies";
 import SummaryInfo from "components/summary/SummaryInfo";
@@ -26,6 +27,7 @@ function Summary() {
       <main id="main-container">
         <div className="content">
           <PageTopbar title={"Summary"} />
+          <SummaryCharts />
           <SummaryTables />
           <SummaryCompanies />
           <SummaryInfo />

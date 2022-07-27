@@ -15802,7 +15802,10 @@ a.badge-secondary.focus {
 .rowDivergent+.rowDivergent {
   margin-top: 30px
 }
-
+.blockDivergent.radialDivergent {
+  padding: 0;
+  justify-content: center;
+}
 .blockDivergent .fieldContainer {
   display: flex;
   position: relative;
@@ -16037,6 +16040,38 @@ a.badge-secondary.focus {
   /* background-color: rgba(46, 46, 46, 1); */
   background-color: #f15200;
   color: #fff;
+}
+
+.buttonsAccount li .buttonsLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0;
+}
+
+.buttonsAccount li .buttonsLinks a {
+  background: none;
+  border: none;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 16px;
+  color: #f6ae7e;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+
+.buttonsAccount li .buttonsLinks span {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 16px;
+  color: #f6ae7e;
+  margin: 0 5px;
+}
+
+.buttonsAccount li .buttonsLinks a:hover {
+  color: #f76400;
 }
 
 .block-content {
@@ -32036,11 +32071,50 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divergence-table thead.upperCase th {
   text-transform: uppercase;
 }
+.divergence-table th.textRight,
+.divergence-table td.textRight {
+  text-align: right;
+}
+.divergence-table thead th .moreLink {
+  font-weight: 500;
+  font-size: 10px;
+  color: #747474;
+}
+.divergence-table thead th .moreLink i {
+  margin: 0 0 0 5px;
+}
+.divergence-table .progress {
+  position: relative;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+  margin: 4px auto;
+  height: 10px;
+  width: 200px;
+}
+.divergence-table .progress-bar {
+  position: relative;
+  height: 10px;
+  border-radius: 0;
+}
+.divergence-table .bg-positive {
+  margin-left: 100px;
+  margin-right: auto;
+  background-color: #00e396;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.divergence-table .bg-negative {
+  margin-right: 100px;
+  margin-left: auto;
+  background-color: #ff0000;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
 .divergence-table tbody tr {
   border: 1px solid #484848;
   background-color: rgba(46, 46, 46, 0.702);
 }
-
 .divergence-table tbody td {
   color: #fff;
 }
@@ -32249,4 +32323,34 @@ ul.pagination > li.active {
 .colTable .table,
 .colTable table {
   margin-bottom: 0;
+}
+.summaryhead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 10px;
+}
+.summaryhead h3 {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  color: #f76400;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;   
+}
+.summaryhead .react-tabs__tab-list {
+  margin: 0;
+}
+.summaryhead .react-tabs__tab {
+  border-radius: 3px;
+  padding: 0 10px;
+  margin: 0 5px 0 0;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  min-width: inherit;
+}
+.summaryContent {
+
 }
