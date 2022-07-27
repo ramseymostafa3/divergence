@@ -70,7 +70,7 @@ function Sidebar (props) {
                   </a>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <a className="nav-main-link" href="trade-set-up">
                     <i className="nav-main-link-icon fa fa-mouse-pointer"></i>
                     <span className="nav-main-link-name">Selection</span>
                   </a>

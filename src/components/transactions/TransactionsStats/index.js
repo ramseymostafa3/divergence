@@ -44,8 +44,8 @@ function TransactionsStats() {
                   </div>
                 </div>
                 <div className='col-12 col-lg-4'>
-                  <h3>LOREM IPSUM</h3> 
-                  <p>IS DUMMY TEXT</p>
+                  {/* <h3>LOREM IPSUM</h3> 
+                  <p>IS DUMMY TEXT</p> */}
                 </div>
             </div>
         </div>

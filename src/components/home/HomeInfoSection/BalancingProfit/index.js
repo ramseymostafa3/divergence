@@ -6,7 +6,7 @@ function BalancingProfit() {
       <h2>Balancing profit with purpose spread trading reinvented.</h2>
       <ul className="author">
         <li>Charles Glah</li>
-        <li>|</li>
+        <li class="sep">|</li>
         <li>Founder, Divergence Capital</li>
       </ul>
     </div>

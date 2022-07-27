@@ -98,7 +98,7 @@ function SummaryTables() {
           <table className="table">
             <thead>
               <tr>
-                <th scope="col" colspan="2">Top 3 Cumulative P&L PER STOCK</th>
+                <th scope="col" colspan="2">TOP 3 CUMULATIVE P&L PER STOCK</th>
                 <th className="textRight"><a herf="javascript:;" class="moreLink"><span>More Details</span><i className="fas fa-caret-right"></i></a></th>
               </tr>
             </thead>

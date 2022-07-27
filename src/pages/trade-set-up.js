@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import Select from 'react-select'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 import Header from "components/header";
 import Sidebar from "components/sidebar";
@@ -23,6 +25,7 @@ function TradeSetUp() {
         { value: 'Broker 01', label: 'Broker 01' },
         { value: 'Broker 02', label: 'Broker 02' }
     ]
+    const [tabIndex, setTabIndex] = useState(0);
     return (
         <div
         id="page-container"
@@ -98,8 +101,6 @@ function TradeSetUp() {
                             </div>
                         </div>
                     </div>
-
-
 
                     <div className="divergence-table table-responsive mb-0">
                         <table className="table">
@@ -202,7 +203,139 @@ function TradeSetUp() {
 
                 </div>
                 <div className='col-md-5'>
-                    
+                <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)} className="tabsTrade">
+                    <TabList>
+                        <Tab>Instrument</Tab>
+                        <Tab>Cluster</Tab>
+                    </TabList> 
+                
+                <TabPanel>
+                    <div className="rowStatus">
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C1</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C2</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C3</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C4</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C5</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C6</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C7</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="colStatus">
+                            <div className="divStatus">
+                                <div className="statusLeft">
+                                    <h3>C8</h3>
+                                    <i className="fas fa-trash-alt"></i>
+                                </div>
+                                <div className="statusRight">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>
+                                    <p>Return</p>
+                                    <span className="status green">0.10786262</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </TabPanel>
+                <TabPanel>
+                </TabPanel>
+                </Tabs>
+                
+                
+                
+                
+                
+                
+
+
                 </div>
             </div>
             <ul className='pagination'>

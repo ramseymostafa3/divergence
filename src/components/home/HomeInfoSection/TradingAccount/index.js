@@ -8,7 +8,7 @@ function TradingAccount() {
         <p>
           Trade over 17,000 markets with{" "}
           <span className="blue">spread bets</span> and{" "}
-          <span className="blue">CPDS</span>, or{" "}
+          <span className="blue">CFD.s</span>, or{" "}
           <span className="blue">invest</span> in thousand of global shares and{" "}
           <span className="blue">ETFs.</span>
         </p>
