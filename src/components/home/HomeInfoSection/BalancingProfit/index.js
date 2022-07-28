@@ -3,7 +3,7 @@ import React from "react";
 function BalancingProfit() {
   return (
     <div className="blockDivergent">
-      <h2>Balancing profit with purpose spread trading reinvented.</h2>
+      <h2>Balancing profit with purpose. Spread trading reinvented.</h2>
       <ul className="author">
         <li>Charles Glah</li>
         <li class="sep">|</li>

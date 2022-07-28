@@ -16011,7 +16011,6 @@ a.badge-secondary.focus {
   color: #272626;
 }
 
-
 .buttonsAccount {
   list-style: none;
   margin: 30px -15px;
@@ -32169,11 +32168,35 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divergence-table .mw-120 {
   min-width: 100px;
 }
+
+.divergence-table i.button {
+  background-color: #f15200;
+  border-radius: 24px;
+  display: block;
+  font-size: 10px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.divergence-table.tableTrade table {
+  margin-bottom: 5px
+}
+
+.divergence-table.tableTrade tr {
+  background-color: #383838;
+}
+
+.divergence-table .tdSearch {
+  background: #2b2b2b;
+  text-align: center;
+}
+
 .success-text {
   color: #00e396;
-}
-.divTransaction {
-
 }
 .divTransaction .fieldWrapper {
   margin: 0 0 20px;
@@ -32187,10 +32210,33 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   margin: 0 0 5px;
   padding: 0;
 }
+.divTransaction .fieldSet {
+  display: flex;
+  flex-direction: row;
+}
+.divTransaction .fieldSet button {
+  background-color: #f15200;
+  border: none;
+  width: 100px;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  color: #fff;
+}
+.divTransaction .fieldSet .selectBox {
+  width: calc(100% - 100px);
+}
+.divTransaction .fieldSet .selectBox > div {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .selectBox > div {
   width: 100%;
   background-color: #2e2e2e;
-  border: none;
   border: 1px solid #393939;
   border-radius: 10px;
   font-size: 16px;
@@ -32354,12 +32400,6 @@ ul.pagination > li.active {
   line-height: 18px;
   min-width: inherit;
 }
-.summaryContent {
-
-}
-.tabsTrade {
-
-}
 .rowStatus {
   display: flex;
   flex-direction: row;
@@ -32381,6 +32421,7 @@ ul.pagination > li.active {
   padding: 10px 5px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .divStatus h3 {
   font-weight: 400;
@@ -32421,4 +32462,57 @@ ul.pagination > li.active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.tabsTrade .react-tabs__tab {
+  text-transform: none;
+}
+.rowSubhead  {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 5px 0;
+}
+.rowSubhead .searchWrap {
+  width: 220px;
+  margin: 0 10px 0 0;
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.rowSubhead .searchField {
+  background-color: #484848;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #818181;
+  padding: 6px 10px;
+  margin: 0;
+  width: calc(100% - 30px);
+}
+.rowSubhead .searchButton {
+  background-color: #2b2b2b;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 32px;
+  color: #a1a1a1;
+  text-align: center;
+}
+.rowSubhead .button {
+  background-color: #f15200;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 6px 30px;
+  display: table;
+  width: 120px;
 }
