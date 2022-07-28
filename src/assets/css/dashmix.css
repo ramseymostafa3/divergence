@@ -32516,3 +32516,129 @@ ul.pagination > li.active {
   display: table;
   width: 120px;
 }
+
+
+.modal-content {
+  background-color: #333232;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}
+.modal-body {
+  padding: 20px 40px 40px;
+}
+.modal-body .dualformRow {
+  margin-left: -39px;
+  margin-right: -39px;
+}
+.modal-body .dualformRow [class^="col-"],
+.modal-body .dualformRow [class*=" col-"] {
+  padding-left: 39px;
+  padding-right: 39px;
+}
+.modal-body .border-right-side {
+  border-right: 1px solid #474747;
+}
+.modal-closebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.modal-closebar i {
+  color: #ff252b;
+  cursor: pointer;
+}
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px -40px 20px;
+  padding: 0;
+  border: none;
+}
+.modal-header .modal-title {
+  background-color: #f15200;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  margin: 0;
+  padding: 10px 40px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.modal-header .modal-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #f6ae7e;
+  margin: 0 40px 0 0;
+  padding: 0;
+}
+.modal-header .modal-link:hover {
+  color: #f76400;
+}
+.modal-body h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  margin: 0 0 20px;
+  padding: 0;
+}
+.modal-body .fieldWrapper {
+  margin: 0 0 25px;
+}
+.modal-body label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #f76400;
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+.modal-body .form-control {
+  background: #2e2e2e;
+  border: 1px solid #484848;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0;
+  height: auto;
+}
+.modal-body .formWrapperCS01 {
+  min-height: 335px;
+}
+
+.modal-body .buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body .button {
+  background: #2f2f2f;
+  border: 1px solid #424141;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  color: #fff;
+  padding: 8px 20px;
+  margin: 0;
+  width: 110px;
+  display: table;
+}
+.modal-body .button.orange {
+  background-color: #f76400;
+  color: #fff;
+}
+.modal-body .button+.button {
+  margin-left: 20px;
+}

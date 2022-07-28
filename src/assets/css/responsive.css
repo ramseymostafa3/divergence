@@ -213,6 +213,15 @@
   .strategy-chart {
     padding: 15px;
   }
+
+  .modal-body .formWrapperCS01 {
+    min-height: inherit;
+  }
+
+  .tabsTrade {
+    margin-top: 25px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -313,4 +322,10 @@
 }
 @media(min-width: 1440px) {
   .bpbg-content {width: 50%;}
+}
+
+@media only screen and (max-width: 1270px) and (min-width: 992px) {
+  .colStatus {
+    width: calc(50% - 10px);
+  }
 }
