@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from 'assets/media/logo.png';
+import { Link } from "react-router-dom";
 
 function Sidebar (props) {
     return (
@@ -70,7 +71,7 @@ function Sidebar (props) {
                   </a>
                 </li>
                 <li className="nav-main-item">
-                  <Link className="nav-main-link" to="trade-set-up">
+                  <Link className="nav-main-link" to="tradesetup">
                     <i className="nav-main-link-icon fa fa-mouse-pointer"></i>
                     <span className="nav-main-link-name">Selection</span>
                   </Link>
@@ -93,9 +94,7 @@ function Sidebar (props) {
                 <h2>New to trading?</h2>
                 <a href="javascript:;">Find out more</a>
               </div>
-    
-              
-  
+
             </div>
   
             <ul className="lowerMenu">

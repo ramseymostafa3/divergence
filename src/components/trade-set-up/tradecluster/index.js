@@ -32,7 +32,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I1</h3>
+                                <h3>NZD/JPY</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -46,7 +46,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I2</h3>
+                                <h3>USD/CAD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -60,7 +60,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I3</h3>
+                                <h3>AUD/JPY</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -74,7 +74,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I4</h3>
+                                <h3>NZD/CAD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -88,7 +88,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I5</h3>
+                                <h3>AUD/USD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -102,7 +102,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I6</h3>
+                                <h3>EUR/AUD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -116,7 +116,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I7</h3>
+                                <h3>EUR/USD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -130,7 +130,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>I8</h3>
+                                <h3>EUR/GBP</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -164,7 +164,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C1</h3>
+                                <h3>AUD/USD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -178,7 +178,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C2</h3>
+                                <h3>EUR/AUD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -192,7 +192,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C3</h3>
+                                <h3>EUR/USD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -206,7 +206,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C4</h3>
+                                <h3>EUR/GBP</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -220,7 +220,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C5</h3>
+                                <h3>NZD/JPY</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -234,7 +234,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C6</h3>
+                                <h3>USD/CAD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -248,7 +248,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C7</h3>
+                                <h3>AUD/JPY</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">
@@ -262,7 +262,7 @@ function TradeCluster() {
                     <div className="colStatus">
                         <div className="divStatus">
                             <div className="statusLeft">
-                                <h3>C8</h3>
+                                <h3>NZD/CAD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
                             <div className="statusRight">

@@ -5,7 +5,7 @@ import Home from "pages/home";
 import Transactions from "pages/transactions";
 import Positions from "pages/positions";
 import Summary from "pages/summary";
-import TradeSetUp from "pages/trade-set-up";
+import TradeSetUp from "pages/tradesetup";
 
 import "assets/css/dashmix.css";
 import "assets/css/responsive.css";
@@ -19,7 +19,7 @@ function App() {
         <Route exact path={"/transactions"} element={<Transactions />} />
         <Route exact path={"/positions"} element={<Positions />} />
         <Route exact path={"/summary"} element={<Summary />} />
-        <Route exact path={"/trade-set-up"} element={<TradeSetUp />} />
+        <Route exact path={"/tradesetup"} element={<TradeSetUp />} />
       </Routes>
     </BrowserRouter>
   );
