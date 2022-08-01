@@ -15911,6 +15911,22 @@ a.badge-secondary.focus {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  position: relative;
+}
+
+.blockDivergent h6.chart-title-yaxis {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #f15200;
+  padding: 0;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 0;
+  bottom: 40px;
+  left: 20px;
+  margin: auto;
+  height: 20px;
 }
 
 .blockDivergent h2,
@@ -32440,7 +32456,7 @@ ul.pagination > li.active {
 }
 .divStatus h3 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   color: #6f51ff;
   margin: 0;

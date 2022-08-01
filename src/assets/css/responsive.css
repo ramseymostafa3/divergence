@@ -270,15 +270,16 @@
     margin: 0 auto;
     text-align: center;
   }
-
   .content-header h3 {
     font-size: 14px;
   }
-
   .content-header .headerSearch .form-control {
     padding: 0 15px;
     font-size: 14px;
     line-height: 20px;
+  }
+  .colStatus {
+    width: calc(50% - 10px);
   }
 }
 
@@ -286,26 +287,21 @@
   .content-header .headleft .menuMob button {
     margin: 0;
   }
-
   .content-header .headleft .logoMob,
   .content-header .menuDesktop,
   .content-header .headright h5 {
     display: none;
   }
-
   .content .timeIntro,
   .content .flipclock-wrap {
     width: 100%;
   }
-
   .content .timeIntro {
     margin: 0 0 20px;
   }
-
   .content .timeAccount ul {
     display: table;
   }
-
   .content .timeAccount ul li,
   .content .timeAccount ul li:nth-child(2),
   .content .timeAccount ul li:nth-child(3),
@@ -323,7 +319,6 @@
 @media(min-width: 1440px) {
   .bpbg-content {width: 50%;}
 }
-
 @media only screen and (max-width: 1270px) and (min-width: 992px) {
   .colStatus {
     width: calc(50% - 10px);
