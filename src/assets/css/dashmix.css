@@ -32420,14 +32420,31 @@ ul.pagination > li.active {
   color: #fff;
   padding: 10px 5px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.divStatus .statusUp,
+.divStatus .statusDown {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.divStatus .statusUp {
+  align-items: center;
+  margin: 0 0 15px;
+}
+.divStatus .stateV,
+.divStatus .stateR {
+  display: flex;
+  flex-direction: column;
+}
 .divStatus h3 {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
+  font-size: 18px;
+  line-height: 24px;
   color: #6f51ff;
+  margin: 0;
+  padding: 0;
 }
 .divStatus p {
   font-size: 10px;
@@ -32437,6 +32454,8 @@ ul.pagination > li.active {
   margin: 0 0 5px;
 }
 .divStatus i {
+  font-size: 12px;
+  line-height: 24px;
   margin: 0 4px 4px;
 }
 .divStatus .status {

@@ -28,116 +28,149 @@ function TradeCluster() {
                         </tbody>
                     </table>
                 </div>
+                
                 <div className="rowStatus">
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>NZD/JPY</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">-0.02%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>USD/CAD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.16%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>AUD/JPY</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.02%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>NZD/CAD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.62%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>AUD/USD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.73%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>EUR/AUD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">-0.59%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>EUR/USD</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
+                            <div className="statusUp">
                                 <h3>EUR/GBP</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774624</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">-0.26%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,113 +196,145 @@ function TradeCluster() {
                 <div className="rowStatus">
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>AUD/USD</h3>
+                            <div className="statusUp">
+                                <h3>C1</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>EUR/AUD</h3>
+                            <div className="statusUp">
+                                <h3>C2</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>EUR/USD</h3>
+                            <div className="statusUp">
+                                <h3>C3</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>EUR/GBP</h3>
+                            <div className="statusUp">
+                                <h3>C4</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>NZD/JPY</h3>
+                            <div className="statusUp">
+                                <h3>C5</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>USD/CAD</h3>
+                            <div className="statusUp">
+                                <h3>C6</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>AUD/JPY</h3>
+                            <div className="statusUp">
+                                <h3>C7</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="colStatus">
                         <div className="divStatus">
-                            <div className="statusLeft">
-                                <h3>NZD/CAD</h3>
+                            <div className="statusUp">
+                                <h3>C8</h3>
                                 <i className="fas fa-trash-alt"></i>
                             </div>
-                            <div className="statusRight">
-                                <p>Volatility</p>
-                                <span className="status red">0.08774624</span>
-                                <p>Return</p>
-                                <span className="status green">0.10786262</span>
+                            <div className="statusDown">
+                                <div className="stateV">
+                                    <p>Volatility</p>
+                                    <span className="status red">0.08774</span>  
+                                </div>
+                                <div className="stateR">
+                                    <p>Return</p>
+                                    <span className="status green">0.10786</span>
+                                </div>
                             </div>
                         </div>
                     </div>
