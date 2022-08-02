@@ -1,6 +1,11 @@
 import React, {useState} from "react";
+import ToggleYesNo from 'components/common/ToggleYesNo';
 
 function TradeTable() {
+    const [isOff, setIsOff] = useState(true);
+    const handleToggle = () => { setIsOff(!isOff);  };
+
+    //setIsOff(prevCheck => !prevCheck);
     return (
         <div className="tradeTable">
             <div className="rowSubhead">
@@ -30,8 +35,8 @@ function TradeTable() {
                             <td>16500000</td>
                             <td>-</td>
                             <td>1</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
+                            <td><ToggleYesNo /></td>
+                            <td><ToggleYesNo /></td>
                             <td class="action">
                                 <i class="fas fa-trash-alt"></i>
                             </td>
@@ -41,8 +46,8 @@ function TradeTable() {
                             <td>16500000</td>
                             <td>-</td>
                             <td>1</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
+                            <td><ToggleYesNo /></td>
+                            <td><ToggleYesNo /></td>
                             <td class="action">
                                 <i class="fas fa-trash-alt"></i>
                             </td>
@@ -52,8 +57,8 @@ function TradeTable() {
                             <td>16500000</td>
                             <td>-</td>
                             <td>1</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
+                            <td><ToggleYesNo /></td>
+                            <td><ToggleYesNo /></td>
                             <td class="action">
                                 <i class="fas fa-trash-alt"></i>
                             </td>
@@ -63,8 +68,8 @@ function TradeTable() {
                             <td>16500000</td>
                             <td>-</td>
                             <td>1</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
+                            <td><ToggleYesNo /></td>
+                            <td><ToggleYesNo /></td>
                             <td class="action">
                                 <i class="fas fa-trash-alt"></i>
                             </td>
@@ -74,8 +79,8 @@ function TradeTable() {
                             <td>16500000</td>
                             <td>-</td>
                             <td>1</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
+                            <td><ToggleYesNo /></td>
+                            <td><ToggleYesNo /></td>
                             <td class="action">
                                 <i class="fas fa-trash-alt"></i>
                             </td>
@@ -85,8 +90,8 @@ function TradeTable() {
                             <td>16500000</td>
                             <td>-</td>
                             <td>1</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
+                            <td><ToggleYesNo /></td>
+                            <td><ToggleYesNo /></td>
                             <td class="action">
                                 <i class="fas fa-trash-alt"></i>
                             </td>
@@ -96,8 +101,8 @@ function TradeTable() {
                             <td>16500000</td>
                             <td>-</td>
                             <td>1</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
+                            <td><ToggleYesNo /></td>
+                            <td><ToggleYesNo /></td>
                             <td class="action">
                                 <i class="fas fa-trash-alt"></i>
                             </td>

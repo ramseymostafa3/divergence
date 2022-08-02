@@ -8,9 +8,9 @@ function Sidebar (props) {
       <nav id="sidebar" aria-label="Main Navigation" className={`${props.sidebarState == true ? 'menu-open' : ''}`}>
           <div className="bg-header-dark">
             <div className="content-header">
-              <a className="font-w600 text-white tracking-wide" href="index.html">
+              <Link className="font-w600 text-white tracking-wide" to="/">
                 <img src={Logo} alt="Divergence" />
-              </a>
+              </Link>
               <div>
                 <a className="text-white" href="javascript:void(0)" onClick={props.togglerFunction}>
                   <i className="fa fa-times-circle"></i>
@@ -23,10 +23,16 @@ function Sidebar (props) {
             <div className="content-side">
               <ul className="nav-main">
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-user-secret "></i>
                     <span className="nav-main-link-name">Traider</span>
-                  </a>
+                  </Link>
+                </li>
+                <li className="nav-main-item">
+                  <Link className="nav-main-link" to="/tradesetup">
+                    <i className="nav-main-link-icon fa fa-mouse-pointer"></i>
+                    <span className="nav-main-link-name">Trade Setup</span>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
                   <a className="nav-main-link" href="javascript:;">
@@ -69,12 +75,6 @@ function Sidebar (props) {
                     <i className="nav-main-link-icon fa fa-search"></i>
                     <span className="nav-main-link-name">Research</span>
                   </a>
-                </li>
-                <li className="nav-main-item">
-                  <Link className="nav-main-link" to="tradesetup">
-                    <i className="nav-main-link-icon fa fa-mouse-pointer"></i>
-                    <span className="nav-main-link-name">Selection</span>
-                  </Link>
                 </li>
                 <li className="nav-main-item">
                   <a className="nav-main-link" href="javascript:;">

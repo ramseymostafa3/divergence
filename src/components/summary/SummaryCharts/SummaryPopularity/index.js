@@ -68,7 +68,7 @@ function SummaryPopularity() {
     return (
       <div className="summaryColumn">
         <div className="summaryhead">
-          <h3>Curruncies popularity for July</h3>
+          <h3>Currency popularity for July</h3>
         </div>
         <div className="summaryContent">
           <div className="blockDivergent radialDivergent">

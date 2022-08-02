@@ -6,13 +6,13 @@ import Modal from 'react-bootstrap/Modal';
 function TradeForm() {
     const options1 = [
         { value: 'Conservative', label: 'Conservative' },
-        { value: 'Modern', label: 'Modern' },
-        { value: 'Flat', label: 'Flat' }
+        { value: 'Moderate', label: 'Moderate' },
+        { value: 'Aggressive', label: 'Aggressive' }
     ]
     const options2 = [
-        { value: 'All Brokers', label: 'All Brokers' },
-        { value: 'Broker 01', label: 'Broker 01' },
-        { value: 'Broker 02', label: 'Broker 02' }
+        { value: 'Oanda', label: 'Oanda' },
+        { value: 'IG', label: 'IG' },
+        { value: 'FXCM', label: 'FXCM' }
     ]
     // const [show, setShow] = useState(false);
     // const handleClose = () => setShow(false);
@@ -46,7 +46,7 @@ function TradeForm() {
                         <label>My Broker</label>
                         <ul class="buttonsAccount my-0">
                             <li>
-                                <a href="javascript:;">IG (Live)</a>
+                                <a href="javascript:;" className='active'>IG (Live)</a>
                                 <div className="buttonsLinks">
                                     <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
                                     <span>|</span>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import UserImg from 'assets/media/user.jpg';
 import Logo from 'assets/media/logo.png';
+import { Link } from "react-router-dom";
 
 function Header (props) {
   return (
@@ -12,9 +13,9 @@ function Header (props) {
                     <button type="button" className="btn btn-dual" onClick={props.togglerFunction} data-toggle="layout" data-action="sidebar">
                       <i className="fa fa-fw fa-bars"></i>
                     </button>
-                    <a className="logoMob" href="javascript:void(0)">
+                    <Link className="logoMob" to="/">
                       <img src={Logo} alt="Divergence" />
-                    </a>
+                    </Link>
                   </div>
 
                   

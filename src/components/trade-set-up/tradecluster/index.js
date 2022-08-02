@@ -39,7 +39,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -57,7 +57,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.78</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -75,7 +75,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.04</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -93,7 +93,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.74</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -111,7 +111,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.62</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -129,7 +129,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.47</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -147,7 +147,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.12</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -165,7 +165,7 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.58</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
@@ -203,11 +203,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
@@ -221,11 +221,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
@@ -239,11 +239,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
@@ -257,11 +257,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
@@ -275,11 +275,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
@@ -293,11 +293,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
@@ -311,11 +311,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
@@ -329,11 +329,11 @@ function TradeCluster() {
                             <div className="statusDown">
                                 <div className="stateV">
                                     <p>Volatility</p>
-                                    <span className="status red">0.08</span>  
+                                    <span className="status red">0.08774624</span>  
                                 </div>
                                 <div className="stateR">
                                     <p>Return</p>
-                                    <span className="status green">0.10</span>
+                                    <span className="status green">0.10%</span>
                                 </div>
                             </div>
                         </div>
