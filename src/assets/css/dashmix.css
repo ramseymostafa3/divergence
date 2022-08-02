@@ -32270,13 +32270,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .selectBox #react-select-3-listbox {
   color: #fff;
 }
-.selectBox .css-2613qy-menu div > div,
+body .selectBox .css-2613qy-menu > div > div,
 .selectBox #react-select-3-listbox div > div,
 .selectBox #react-select-5-listbox div > div {
   background-color: transparent;
   border-radius: 7px;
 }
-.selectBox .css-2613qy-menu div > div:hover,
+body .selectBox .css-2613qy-menu > div > div:hover,
 .selectBox #react-select-3-listbox div > div:hover,
 .selectBox #react-select-5-listbox div > div:hover {
   background-color: #f15200;

@@ -14,6 +14,14 @@ function TradeForm() {
         { value: 'IG', label: 'IG' },
         { value: 'FXCM', label: 'FXCM' }
     ]
+
+    const [selectedCategory, setSelectedCategory] = useState('iglive');
+
+    const isIgLive      = selectedCategory === 'iglive';
+    const isIgDemo      = selectedCategory === 'igdemo';
+    const isOandaLive   = selectedCategory === 'oandalive';
+    const isOandaDemo   = selectedCategory === 'oandademo';
+
     // const [show, setShow] = useState(false);
     // const handleClose = () => setShow(false);
     // const handleShow = () => setShow(true);
@@ -46,7 +54,7 @@ function TradeForm() {
                         <label>My Broker</label>
                         <ul class="buttonsAccount my-0">
                             <li>
-                                <a href="javascript:;" className='active'>IG (Live)</a>
+                                <a href="javascript:;" onClick={() => setSelectedCategory('iglive')} className={`categories ${isIgLive ? 'active' : ''}`}>IG (Live)</a>
                                 <div className="buttonsLinks">
                                     <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
                                     <span>|</span>
@@ -54,7 +62,7 @@ function TradeForm() {
                                 </div>
                             </li>
                             <li>
-                                <a href="javascript:;">IG (Demo)</a>
+                                <a href="javascript:;" onClick={() => setSelectedCategory('igdemo')} className={`categories ${isIgDemo ? 'active' : ''}`}>IG (Demo)</a>
                                 <div className="buttonsLinks">
                                     <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
                                     <span>|</span>
@@ -62,7 +70,7 @@ function TradeForm() {
                                 </div>
                             </li>
                             <li>
-                                <a href="javascript:;">Oanda (Live)</a>
+                                <a href="javascript:;" onClick={() => setSelectedCategory('oandalive')} className={`categories ${isOandaLive ? 'active' : ''}`}>Oanda (Live)</a>
                                 <div className="buttonsLinks">
                                     <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
                                     <span>|</span>
@@ -70,7 +78,7 @@ function TradeForm() {
                                 </div>
                             </li>
                             <li>
-                                <a href="javascript:;">Oanda (Demo)</a>
+                                <a href="javascript:;" onClick={() => setSelectedCategory('oandademo')} className={`categories ${isOandaDemo ? 'active' : ''}`}>Oanda (Demo)</a>
                                 <div className="buttonsLinks">
                                     <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
                                     <span>|</span>
