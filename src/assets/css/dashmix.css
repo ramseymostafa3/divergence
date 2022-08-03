@@ -32134,12 +32134,14 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   background-color: rgba(46, 46, 46, 0.702);
 }
 .divergence-table tbody td {
-  color: #fff;
+  color: #fff
 }
+.text-green,
 .divergence-table tbody td.success-text,
 .divergence-table tbody td.green {
   color: #00e396;
 }
+.text-red,
 .divergence-table tbody td.red {
   color: #fa1d1d;
 }
@@ -32165,12 +32167,10 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-
 .divergence-table tbody td:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 .divergence-table thead th,
 .divergence-table tbody td {
   font-size: 12.86px;
@@ -32184,7 +32184,21 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divergence-table .mw-120 {
   min-width: 100px;
 }
-
+.divergence-table tbody td input {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: #fff;
+}
+.divergence-table tbody td input:focus-visible {
+  outline: none;
+}
+.divergence-table tbody td input.w30 {
+  width: 30px;
+}
+.divergence-table tbody td input.w100 {
+  width: 100px;
+}
+.divergence-table tbody td input
 .divergence-table i.button {
   background-color: #f15200;
   border-radius: 24px;
@@ -32211,6 +32225,56 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   text-align: center;
 }
 
+.showHide {
+  margin: 0;
+  padding: 0;
+}
+.showHide .fieldWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 7px;
+  overflow: hidden;
+  width: 140px;
+  padding: 0;
+  margin: 0;
+}
+.showHide .fieldWrap.fullWidth {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 0 10px;
+}
+.showHide .fieldWrap .inputfield {
+  background-color: rgba(0,0,0,0.4);
+  border: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  padding: 5px;
+  margin: 0;
+  width: calc(100% - 55px);
+}
+.showHide .fieldWrap .submit {
+  background-color: #f15200;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  padding: 5px;
+  margin: 0;
+  width: 55px;
+}
+.showHide .fieldWrap.fullWidth .inputfield {
+  padding: 5px 10px;
+  width: calc(100% - 70px);
+}
+.showHide .fieldWrap.fullWidth .submit {
+  width: 70px;
+}
+.pointer {
+  cursor: pointer;
+}
 .success-text {
   color: #00e396;
 }

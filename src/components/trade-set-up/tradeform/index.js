@@ -26,7 +26,10 @@ function TradeForm() {
     // const handleClose = () => setShow(false);
     // const handleShow = () => setShow(true);
 
-    const [lfShow, setLFShow] = useState(false);
+    const [lfShow1, setLFShow1] = useState(false);
+    const [lfShow2, setLFShow2] = useState(false);
+    const [lfShow3, setLFShow3] = useState(false);
+    const [lfShow4, setLFShow4] = useState(false);
 
     return (
         <div className="divTransaction">
@@ -56,7 +59,7 @@ function TradeForm() {
                             <li>
                                 <a href="javascript:;" onClick={() => setSelectedCategory('iglive')} className={`categories ${isIgLive ? 'active' : ''}`}>IG (Live)</a>
                                 <div className="buttonsLinks">
-                                    <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
+                                    <a href="javascript:;" onClick={() => setLFShow1(true)}>Credentials</a>
                                     <span>|</span>
                                     <a href="javascript:;">Delete</a>
                                 </div>
@@ -64,7 +67,7 @@ function TradeForm() {
                             <li>
                                 <a href="javascript:;" onClick={() => setSelectedCategory('igdemo')} className={`categories ${isIgDemo ? 'active' : ''}`}>IG (Demo)</a>
                                 <div className="buttonsLinks">
-                                    <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
+                                    <a href="javascript:;" onClick={() => setLFShow2(true)}>Credentials</a>
                                     <span>|</span>
                                     <a href="javascript:;">Delete</a>
                                 </div>
@@ -72,7 +75,7 @@ function TradeForm() {
                             <li>
                                 <a href="javascript:;" onClick={() => setSelectedCategory('oandalive')} className={`categories ${isOandaLive ? 'active' : ''}`}>Oanda (Live)</a>
                                 <div className="buttonsLinks">
-                                    <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
+                                    <a href="javascript:;" onClick={() => setLFShow3(true)}>Credentials</a>
                                     <span>|</span>
                                     <a href="javascript:;">Delete</a>
                                 </div>
@@ -80,22 +83,22 @@ function TradeForm() {
                             <li>
                                 <a href="javascript:;" onClick={() => setSelectedCategory('oandademo')} className={`categories ${isOandaDemo ? 'active' : ''}`}>Oanda (Demo)</a>
                                 <div className="buttonsLinks">
-                                    <a href="javascript:;" onClick={() => setLFShow(true)}>Credentials</a>
+                                    <a href="javascript:;" onClick={() => setLFShow4(true)}>Credentials</a>
                                     <span>|</span>
                                     <a href="javascript:;">Delete</a>
                                 </div>
                             </li>
                         </ul>
                         <Modal
-                            show={lfShow}
-                            onHide={() => setLFShow(false)}
+                            show={lfShow1}
+                            onHide={() => setLFShow1(false)}
                             size="lg"
                             aria-labelledby="contained-modal-title-vcenter"
                             centered
                         >
                         <Modal.Body>
                             <div className="modal-closebar">
-                                <i className="fas fa-times" onClick={() => setLFShow(false)}></i>
+                                <i className="fas fa-times" onClick={() => setLFShow1(false)}></i>
                             </div>
                             <div className="modal-header">
                                 <h2 className="modal-title">Credentials</h2>
@@ -124,8 +127,8 @@ function TradeForm() {
                                     </div>
 
                                     <div className="buttonGroup">
-                                        <button type="submit" className="button orange" onClick={() => setLFShow(false)}>Live</button>
-                                        <button type="submit" className="button" onClick={() => setLFShow(false)}>Demo</button>
+                                        <button type="submit" className="button orange">Live</button>
+                                        <button type="submit" className="button">Demo</button>
                                     </div>
 
                                 </div>
@@ -146,8 +149,215 @@ function TradeForm() {
                                     </div>
                                     
                                     <div className="buttonGroup">
-                                        <button type="submit" className="button orange" onClick={() => setLFShow(false)}>Live</button>
-                                        <button type="submit" className="button" onClick={() => setLFShow(false)}>Demo</button>
+                                        <button type="submit" className="button">Live</button>
+                                        <button type="submit" className="button">Demo</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </Modal.Body>
+                        </Modal>
+
+                        <Modal
+                            show={lfShow2}
+                            onHide={() => setLFShow2(false)}
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered
+                        >
+                        <Modal.Body>
+                            <div className="modal-closebar">
+                                <i className="fas fa-times" onClick={() => setLFShow2(false)}></i>
+                            </div>
+                            <div className="modal-header">
+                                <h2 className="modal-title">Credentials</h2>
+                                <a href="javascript:;" className="modal-link">Test Connection</a>
+                            </div>
+                            <div className="row dualformRow">
+                                <div className="col-12 col-lg-6 border-right-side">
+
+                                    <h2>IG</h2>
+
+                                    <div className="formWrapperCS01">
+                                        <div className="fieldWrapper">
+                                            <label>User Name</label>
+                                            <input type="text" className="form-control" placeholder="User Name" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>API Key</label>
+                                            <input type="text" className="form-control" placeholder="API Key" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>Password</label>
+                                            <input type="password" className="form-control" placeholder="Password" />
+                                        </div>
+                                    </div>
+
+                                    <div className="buttonGroup">
+                                        <button type="submit" className="button">Live</button>
+                                        <button type="submit" className="button orange">Demo</button>
+                                    </div>
+
+                                </div>
+                                <div className="col-12 col-lg-6">
+
+                                    <h2>Oanda</h2>
+
+                                    <div className="formWrapperCS01">
+                                        <div className="fieldWrapper">
+                                            <label>Token</label>
+                                            <input type="text" className="form-control" placeholder="Token" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>Default Account</label>
+                                            <input type="text" className="form-control" placeholder="Default Account" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="buttonGroup">
+                                        <button type="submit" className="button">Live</button>
+                                        <button type="submit" className="button">Demo</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </Modal.Body>
+                        </Modal>
+
+                        <Modal
+                            show={lfShow3}
+                            onHide={() => setLFShow3(false)}
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered
+                        >
+                        <Modal.Body>
+                            <div className="modal-closebar">
+                                <i className="fas fa-times" onClick={() => setLFShow3(false)}></i>
+                            </div>
+                            <div className="modal-header">
+                                <h2 className="modal-title">Credentials</h2>
+                                <a href="javascript:;" className="modal-link">Test Connection</a>
+                            </div>
+                            <div className="row dualformRow">
+                                <div className="col-12 col-lg-6 border-right-side">
+
+                                    <h2>IG</h2>
+
+                                    <div className="formWrapperCS01">
+                                        <div className="fieldWrapper">
+                                            <label>User Name</label>
+                                            <input type="text" className="form-control" placeholder="User Name" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>API Key</label>
+                                            <input type="text" className="form-control" placeholder="API Key" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>Password</label>
+                                            <input type="password" className="form-control" placeholder="Password" />
+                                        </div>
+                                    </div>
+
+                                    <div className="buttonGroup">
+                                        <button type="submit" className="button">Live</button>
+                                        <button type="submit" className="button">Demo</button>
+                                    </div>
+
+                                </div>
+                                <div className="col-12 col-lg-6">
+
+                                    <h2>Oanda</h2>
+
+                                    <div className="formWrapperCS01">
+                                        <div className="fieldWrapper">
+                                            <label>Token</label>
+                                            <input type="text" className="form-control" placeholder="Token" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>Default Account</label>
+                                            <input type="text" className="form-control" placeholder="Default Account" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="buttonGroup">
+                                        <button type="submit" className="button orange">Live</button>
+                                        <button type="submit" className="button">Demo</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </Modal.Body>
+                        </Modal>
+
+                        <Modal
+                            show={lfShow4}
+                            onHide={() => setLFShow4(false)}
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered
+                        >
+                        <Modal.Body>
+                            <div className="modal-closebar">
+                                <i className="fas fa-times" onClick={() => setLFShow4(false)}></i>
+                            </div>
+                            <div className="modal-header">
+                                <h2 className="modal-title">Credentials</h2>
+                                <a href="javascript:;" className="modal-link">Test Connection</a>
+                            </div>
+                            <div className="row dualformRow">
+                                <div className="col-12 col-lg-6 border-right-side">
+
+                                    <h2>IG</h2>
+
+                                    <div className="formWrapperCS01">
+                                        <div className="fieldWrapper">
+                                            <label>User Name</label>
+                                            <input type="text" className="form-control" placeholder="User Name" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>API Key</label>
+                                            <input type="text" className="form-control" placeholder="API Key" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>Password</label>
+                                            <input type="password" className="form-control" placeholder="Password" />
+                                        </div>
+                                    </div>
+
+                                    <div className="buttonGroup">
+                                        <button type="submit" className="button">Live</button>
+                                        <button type="submit" className="button">Demo</button>
+                                    </div>
+
+                                </div>
+                                <div className="col-12 col-lg-6">
+
+                                    <h2>Oanda</h2>
+
+                                    <div className="formWrapperCS01">
+                                        <div className="fieldWrapper">
+                                            <label>Token</label>
+                                            <input type="text" className="form-control" placeholder="Token" />
+                                        </div>
+
+                                        <div className="fieldWrapper">
+                                            <label>Default Account</label>
+                                            <input type="text" className="form-control" placeholder="Default Account" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="buttonGroup">
+                                        <button type="submit" className="button">Live</button>
+                                        <button type="submit" className="button orange">Demo</button>
                                     </div>
 
                                 </div>

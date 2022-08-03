@@ -32,9 +32,9 @@ function TradeTable() {
                     <tbody>
                         <tr>
                             <td>NZD/USD</td>
-                            <td>16500000</td>
+                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
                             <td>-</td>
-                            <td>1</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={4}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -43,9 +43,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td>16500000</td>
+                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
                             <td>-</td>
-                            <td>1</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={1}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -54,9 +54,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td>16500000</td>
+                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
                             <td>-</td>
-                            <td>1</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={7}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -65,9 +65,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td>16500000</td>
+                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
                             <td>-</td>
-                            <td>1</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={2}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -76,9 +76,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td>16500000</td>
+                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
                             <td>-</td>
-                            <td>1</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={9}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -87,9 +87,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td>16500000</td>
+                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
                             <td>-</td>
-                            <td>1</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={5}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -98,9 +98,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td>16500000</td>
+                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
                             <td>-</td>
-                            <td>1</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={1}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
