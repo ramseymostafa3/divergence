@@ -21,15 +21,15 @@ function ToggleYesNo(){
 
     return (
         <>
-        <span onClick={() => { handleToggle(); setIsOff(!isOff); handleClick(); }} className={`pointer text-${isActive ? "green" : "red"}`}>{ isOff ? 'Yes' : 'No' }</span>
-        {isShown && (
+        <span onClick={() => { handleToggle(); setIsOff(!isOff); /*handleClick();*/ }} className={`pointer text-${isActive ? "green" : "red"}`}>{ isOff ? 'Yes' : 'No' }</span>
+        {/*{isShown && (
             <div className="showHide">
                 <div className="fieldWrap">
                     <input className="inputfield" type="text" name="maxtrade" defaultValue={165000}/>
                     <input className="submit" type="submit" value="Submit" />
                 </div>
             </div>
-        )}
+        )}*/}
         </>
     );
 };

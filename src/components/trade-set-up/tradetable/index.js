@@ -33,7 +33,7 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td>-</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
                             <td><input className="w30" type="text" name="maxtrade" defaultValue={4}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
@@ -44,7 +44,7 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td>-</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={2}/></td>
                             <td><input className="w30" type="text" name="maxtrade" defaultValue={1}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
@@ -55,7 +55,7 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td>-</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
                             <td><input className="w30" type="text" name="maxtrade" defaultValue={7}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
@@ -66,7 +66,7 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td>-</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={8}/></td>
                             <td><input className="w30" type="text" name="maxtrade" defaultValue={2}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
@@ -77,7 +77,7 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td>-</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={4}/></td>
                             <td><input className="w30" type="text" name="maxtrade" defaultValue={9}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
@@ -88,7 +88,7 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td>-</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
                             <td><input className="w30" type="text" name="maxtrade" defaultValue={5}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
@@ -99,7 +99,7 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td>-</td>
+                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
                             <td><input className="w30" type="text" name="maxtrade" defaultValue={1}/></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
