@@ -32268,6 +32268,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   /* clear: both;
   display: block; */
   border-radius: 2px;
+  cursor: pointer;
 }
 .showHide .fieldWrap .submit {
   background-color: #f15200;
