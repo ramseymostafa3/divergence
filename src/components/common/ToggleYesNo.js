@@ -20,7 +20,7 @@ function ToggleYesNo(){
 
     const [isOff, setIsOff] = useState(true);
 
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(true);
     const handleChange = nextChecked => {
         setChecked(nextChecked);
     };
@@ -36,10 +36,12 @@ function ToggleYesNo(){
             height={16}
             width={32}
             /*offColor='#fa1d1d'*/
-            //onHandleColor='#f15200'
+            onColor='#8b3d16'
+            onHandleColor='#f8610e'
             />
             <span className={`pointer text-${checked ? "green" : "red"}`}>{checked ? "Yes" : "No"}</span>
         </label>
+        <input className={`${checked ? "d-none" : "button"}`} type="sumit" value="Submit" />
         
 
         {/*{isShown && (

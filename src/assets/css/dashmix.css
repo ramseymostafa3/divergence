@@ -32254,6 +32254,21 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   margin: 0;
   width: calc(100% - 55px);
 }
+.labelSwitch + .button {
+  background-color: #f15200;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  padding: 5px;
+  margin: 0 0 0 10px;
+  width: 55px;
+  text-align: center;
+  /* clear: both;
+  display: block; */
+  border-radius: 2px;
+}
 .showHide .fieldWrap .submit {
   background-color: #f15200;
   border: none;
@@ -32264,6 +32279,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   padding: 5px;
   margin: 0;
   width: 55px;
+  cursor: pointer;
 }
 .showHide .fieldWrap.fullWidth .inputfield {
   padding: 5px 10px;
