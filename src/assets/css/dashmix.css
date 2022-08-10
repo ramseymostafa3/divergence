@@ -32750,3 +32750,12 @@ ul.pagination > li.active {
 .modal-body .button+.button {
   margin-left: 20px;
 }
+
+.react-switch {
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+.labelSwitch {
+  margin-bottom: 0;
+  font-weight: 300;
+}
