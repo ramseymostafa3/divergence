@@ -41,7 +41,7 @@ function ToggleYesNo(){
             />
             <span className={`pointer text-${checked ? "green" : "red"}`}>{checked ? "Yes" : "No"}</span>
         </label>
-        <input className={`${checked ? "d-none" : "button"}`} type="sumit" value="Submit" />
+        <button className={`${checked ? "d-none" : "button"}`} type="sumit">Submit</button>
         
 
         {/*{isShown && (
