@@ -262,6 +262,13 @@
   .clocks-wrap .clock-item {
     margin: 0 15px 15px;
   }
+
+  .labelSwitch + .button {
+    width: 70px;
+    display: block;
+    clear: both;
+    margin: 5px 0 0;
+  }
 }
 
 @media only screen and (max-width: 595px) {
@@ -322,5 +329,13 @@
 @media only screen and (max-width: 1270px) and (min-width: 992px) {
   .colStatus {
     width: calc(50% - 10px);
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+  .labelSwitch + .button {
+    width: 70px;
+    display: block;
+    clear: both;
+    margin: 5px 0 0;
   }
 }

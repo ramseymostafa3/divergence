@@ -1,9 +1,23 @@
 import React, {useState} from "react";
 import ToggleYesNo from 'components/common/ToggleYesNo';
+import NumericField from 'components/common/NumericField';
+import ThousandField from 'components/common/ThousandField';
 
 function TradeTable() {
     const [isOff, setIsOff] = useState(true);
     const handleToggle = () => { setIsOff(!isOff);  };
+
+
+    const min = 1;
+    const max = 10;
+
+    const [value, setValue] = useState(1);
+
+    const handleChange = event => {
+    const value = Math.max(min, Math.min(max, Number(event.target.value)));
+    setValue(value);
+    };
+
 
     //setIsOff(prevCheck => !prevCheck);
     return (
@@ -32,9 +46,9 @@ function TradeTable() {
                     <tbody>
                         <tr>
                             <td>NZD/USD</td>
-                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={4}/></td>
+                            <td><ThousandField name={'positionsize'} value={'16500000'} /></td>
+                            <td><NumericField name={'stoploss'} /></td>
+                            <td><NumericField name={'maxtrades'} /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -43,9 +57,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={2}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={1}/></td>
+                            <td><ThousandField name={'positionsize'} value={'16000'} /></td>
+                            <td><NumericField name={'stoploss'} /></td>
+                            <td><NumericField name={'maxtrades'} /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -54,9 +68,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={7}/></td>
+                            <td><ThousandField name={'positionsize'} value={'15000'} /></td>
+                            <td><NumericField name={'stoploss'} /></td>
+                            <td><NumericField name={'maxtrades'} /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -65,9 +79,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={8}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={2}/></td>
+                            <td><ThousandField name={'positionsize'} value={'150'} /></td>
+                            <td><NumericField name={'stoploss'} /></td>
+                            <td><NumericField name={'maxtrades'} /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -76,9 +90,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={4}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={9}/></td>
+                            <td><ThousandField name={'positionsize'} value={'150050'} /></td>
+                            <td><NumericField name={'stoploss'} /></td>
+                            <td><NumericField name={'maxtrades'} /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -87,9 +101,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={5}/></td>
+                            <td><ThousandField name={'positionsize'} value={'10000'} /></td>
+                            <td><NumericField name={'stoploss'} /></td>
+                            <td><NumericField name={'maxtrades'} /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -98,9 +112,9 @@ function TradeTable() {
                         </tr>
                         <tr>
                             <td>NZD/USD</td>
-                            <td><input className="w100" type="text" name="maxtrade" defaultValue={16500000}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={'-'}/></td>
-                            <td><input className="w30" type="text" name="maxtrade" defaultValue={1}/></td>
+                            <td><ThousandField name={'positionsize'} value={'12000950'} /></td>
+                            <td><NumericField name={'stoploss'} /></td>
+                            <td><NumericField name={'maxtrades'} /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">

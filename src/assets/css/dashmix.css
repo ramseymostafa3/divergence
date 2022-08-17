@@ -32195,6 +32195,12 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divergence-table tbody td input.w30 {
   width: 30px;
 }
+.divergence-table tbody td input.w40 {
+  width: 40px;
+}
+.divergence-table tbody td input.w50 {
+  width: 50px;
+}
 .divergence-table tbody td input.w100 {
   width: 100px;
 }
