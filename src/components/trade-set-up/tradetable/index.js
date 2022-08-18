@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import ToggleYesNo from 'components/common/ToggleYesNo';
 import NumericField from 'components/common/NumericField';
 import ThousandField from 'components/common/ThousandField';
+import StopLoss from 'components/common/stoploss';
+import MaxTrades from 'components/common/maxtrades';
+
+
 
 function TradeTable() {
     const [isOff, setIsOff] = useState(true);
@@ -47,8 +51,8 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><ThousandField name={'positionsize'} value={'16500000'} /></td>
-                            <td><NumericField name={'stoploss'} /></td>
-                            <td><NumericField name={'maxtrades'} /></td>
+                            <td><StopLoss defaultvalue='10' /></td>
+                            <td><MaxTrades defaultvalue='2' /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -58,8 +62,8 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><ThousandField name={'positionsize'} value={'16000'} /></td>
-                            <td><NumericField name={'stoploss'} /></td>
-                            <td><NumericField name={'maxtrades'} /></td>
+                            <td><StopLoss defaultvalue='20' /></td>
+                            <td><MaxTrades defaultvalue='6' /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -69,8 +73,8 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><ThousandField name={'positionsize'} value={'15000'} /></td>
-                            <td><NumericField name={'stoploss'} /></td>
-                            <td><NumericField name={'maxtrades'} /></td>
+                            <td><StopLoss defaultvalue='1'/></td>
+                            <td><MaxTrades defaultvalue='4' /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -80,8 +84,8 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><ThousandField name={'positionsize'} value={'150'} /></td>
-                            <td><NumericField name={'stoploss'} /></td>
-                            <td><NumericField name={'maxtrades'} /></td>
+                            <td><StopLoss defaultvalue='400' /></td>
+                            <td><MaxTrades defaultvalue='3' /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -91,8 +95,8 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><ThousandField name={'positionsize'} value={'150050'} /></td>
-                            <td><NumericField name={'stoploss'} /></td>
-                            <td><NumericField name={'maxtrades'} /></td>
+                            <td><StopLoss defaultvalue='4' /></td>
+                            <td><MaxTrades defaultvalue='9' /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -102,8 +106,8 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><ThousandField name={'positionsize'} value={'10000'} /></td>
-                            <td><NumericField name={'stoploss'} /></td>
-                            <td><NumericField name={'maxtrades'} /></td>
+                            <td><StopLoss defaultvalue='1' /></td>
+                            <td><MaxTrades defaultvalue='3' /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
@@ -113,8 +117,8 @@ function TradeTable() {
                         <tr>
                             <td>NZD/USD</td>
                             <td><ThousandField name={'positionsize'} value={'12000950'} /></td>
-                            <td><NumericField name={'stoploss'} /></td>
-                            <td><NumericField name={'maxtrades'} /></td>
+                            <td><StopLoss defaultvalue='398' /></td>
+                            <td><MaxTrades defaultvalue='2' /></td>
                             <td><ToggleYesNo /></td>
                             <td><ToggleYesNo /></td>
                             <td class="action">
