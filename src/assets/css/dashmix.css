@@ -14681,6 +14681,12 @@ a.badge-secondary.focus {
   color: #fff;
 }
 
+.content .timeIntro .buttons button.waiting-to-start,
+.content .timeIntro .button.waiting-to-start {
+  background-color: #FFBF00;
+  color: #fff;
+}
+
 .content .timeAccount ul {
   display: flex;
   flex-direction: row;
