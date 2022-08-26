@@ -13,8 +13,8 @@ const MARKET_TIMINGS = {
     stop: moment().set({ hour: 16, minute: 0, second: 0, millisecond: 0 }),
   },
   'Asia + London': {
-    start: moment().set({ hour: 8, minute: 0, second: 0, millisecond: 0 }),
-    stop: moment().set({ hour: 8, minute: 0, second: 0, millisecond: 0 }),
+    start: moment().set({ hour: 22, minute: 0, second: 0, millisecond: 0 }).subtract(1, 'days'),
+    stop: moment().set({ hour: 16, minute: 0, second: 0, millisecond: 0 }),
   },
   'London + New York': {
     start: moment().set({ hour: 13, minute: 0, second: 0, millisecond: 0 }),
@@ -37,13 +37,24 @@ function TimeArea() {
   const [selectedTimeZone, setSelectedTimeZone] = useState(null);
 
   function calculateMarketTimings() {
-    const currentTime = moment(new Date());
+    const currentTime = moment();
+    // temp change for testing
+    // const currentTime = moment(7, 'HH');
+    console.log(currentTime);
     setButtonClassName("waiting-to-start");
     const selectedMarketTimings = MARKET_TIMINGS[selectedTimeZone];
-    const timeDifferenceFromMarketStart = moment.duration(selectedMarketTimings.start.diff(currentTime));
-    if (timeDifferenceFromMarketStart.milliseconds() > 0 || timeDifferenceFromMarketStart.minutes() > 0) {
-      setTime(timeDifferenceFromMarketStart.asMilliseconds());
+    console.log(selectedMarketTimings.start);
+    console.log(selectedMarketTimings.stop);
+    const timeDifferenceFromMarketStart = selectedMarketTimings.start.diff(currentTime, 'milliseconds');
+    console.log(timeDifferenceFromMarketStart);
+    if (timeDifferenceFromMarketStart > 0) {
+      setTime(timeDifferenceFromMarketStart);
     }
+    if (selectedTimeZone === 'Asia + London' && timeDifferenceFromMarketStart < 0 && (!currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop))) {
+      const timeDifferenceFromMarketStart = selectedMarketTimings.start.add(1, 'days').diff(currentTime, 'milliseconds');
+      setTime(Math.abs(timeDifferenceFromMarketStart));
+    }
+
     if (currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop)) {
       setButtonClassName("stop");
       setTime(0);
@@ -104,7 +115,7 @@ function TimeArea() {
             </div>
           </div>
 
-          <TimeLoc onTimeZoneChange={handleTimeZoneChange} />
+          <TimeLoc onTimeZoneChange={handleTimeZoneChange} isRunning={running}/>
 
           <div className="stopwatch">
             <div className="numbers">
