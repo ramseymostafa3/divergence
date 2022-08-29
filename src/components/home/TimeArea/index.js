@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import TimeLoc from "./TimeLoc";
 import AllClocks from "components/clocks/AllClocks";
 import moment from 'moment-timezone';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MARKET_TIMINGS = {
   'Asia': {
@@ -30,6 +32,7 @@ const MARKET_TIMINGS = {
   }
 }
 
+
 function TimeArea() {
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
@@ -38,19 +41,14 @@ function TimeArea() {
 
   function calculateMarketTimings() {
     const currentTime = moment();
-    // temp change for testing
-    // const currentTime = moment(7, 'HH');
-    console.log(currentTime);
+    // const currentTime = moment(28, 'DD').set({ hour: 13, minute: 0, second: 0, millisecond: 0 }); // only for testing
     setButtonClassName("waiting-to-start");
     const selectedMarketTimings = MARKET_TIMINGS[selectedTimeZone];
-    console.log(selectedMarketTimings.start);
-    console.log(selectedMarketTimings.stop);
     const timeDifferenceFromMarketStart = selectedMarketTimings.start.diff(currentTime, 'milliseconds');
-    console.log(timeDifferenceFromMarketStart);
     if (timeDifferenceFromMarketStart > 0) {
       setTime(timeDifferenceFromMarketStart);
     }
-    if (selectedTimeZone === 'Asia + London' && timeDifferenceFromMarketStart < 0 && (!currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop))) {
+    if (selectedTimeZone === 'Asia + London' && timeDifferenceFromMarketStart < 0 && ((!currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop)) || currentTime.day() === 0)) {
       const timeDifferenceFromMarketStart = selectedMarketTimings.start.add(1, 'days').diff(currentTime, 'milliseconds');
       setTime(Math.abs(timeDifferenceFromMarketStart));
     }
@@ -62,6 +60,16 @@ function TimeArea() {
   }
 
   function changeButtonStatus() {
+    const dayOfWeek = moment().day();
+    if (dayOfWeek === 6) {
+      toast('Market closed on this day.');
+      return;
+    }
+    else if (dayOfWeek === 0 && (selectedTimeZone !== 'Asia' && selectedTimeZone !== 'Asia + London')) {
+      toast('Market closed on this day.');
+      return;
+    }
+
     setRunning(true);
     calculateMarketTimings();
   }
@@ -99,6 +107,7 @@ function TimeArea() {
 
   return (
     <div className="row rowDivergent row01">
+    <ToastContainer />
       <div className="col-12 col-xl-7">
 
         <div className="timeAccount">
@@ -115,7 +124,7 @@ function TimeArea() {
             </div>
           </div>
 
-          <TimeLoc onTimeZoneChange={handleTimeZoneChange} isRunning={running}/>
+          <TimeLoc onTimeZoneChange={handleTimeZoneChange} isRunning={running} />
 
           <div className="stopwatch">
             <div className="numbers">
