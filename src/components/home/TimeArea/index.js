@@ -44,7 +44,8 @@ function TimeArea() {
     // const currentTime = moment(28, 'DD').set({ hour: 13, minute: 0, second: 0, millisecond: 0 }); // only for testing
     setButtonClassName("waiting-to-start");
     const selectedMarketTimings = MARKET_TIMINGS[selectedTimeZone];
-    const timeDifferenceFromMarketStart = selectedMarketTimings.start.diff(currentTime, 'milliseconds');
+    let timeDifferenceFromMarketStart = selectedMarketTimings.start.diff(currentTime, 'milliseconds');
+    timeDifferenceFromMarketStart = timeDifferenceFromMarketStart - (timeDifferenceFromMarketStart % 10);
     if (timeDifferenceFromMarketStart > 0) {
       setTime(timeDifferenceFromMarketStart);
     }
