@@ -41,6 +41,7 @@ function TimeArea() {
 
   function calculateMarketTimings() {
     const currentTime = moment();
+    console.log('currentTime', currentTime);
     // const currentTime = moment(28, 'DD').set({ hour: 13, minute: 0, second: 0, millisecond: 0 }); // only for testing
     setButtonClassName("waiting-to-start");
     const selectedMarketTimings = MARKET_TIMINGS[selectedTimeZone];
