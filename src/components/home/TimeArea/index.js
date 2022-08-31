@@ -32,7 +32,6 @@ const MARKET_TIMINGS = {
   }
 }
 
-moment.tz.setDefault("Europe/London");
 
 function TimeArea() {
   const [time, setTime] = useState(0);
@@ -41,9 +40,9 @@ function TimeArea() {
   const [selectedTimeZone, setSelectedTimeZone] = useState(null);
 
   function calculateMarketTimings() {
-    const currentTime = moment();
-    // const currentTime = moment().tz('Europe/London');
-    console.log('currentTime', currentTime);
+    const localTime = moment();
+    const currentTime = localTime.tz('Europe/London');
+    console.log('localTime', localTime, 'currentTime', currentTime);
     // const currentTime = moment(28, 'DD').set({ hour: 13, minute: 0, second: 0, millisecond: 0 }); // only for testing
     setButtonClassName("waiting-to-start");
     const selectedMarketTimings = MARKET_TIMINGS[selectedTimeZone];
