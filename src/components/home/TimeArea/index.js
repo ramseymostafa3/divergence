@@ -44,37 +44,38 @@ function TimeArea() {
     setTime(0);
     const nativeTimeNow = new Date().toLocaleString('en-US', { timeZone: 'Europe/London' });
     console.log('nativeTimeNow', nativeTimeNow);
-    // const currentTime = moment(nativeTimeNow);
-    const currentTime = moment(nativeTimeNow).set({ hour: 22, minute: 59, second: 55, millisecond: 0 }); // only for testing
+    const currentTime = moment(nativeTimeNow);
+    // const currentTime = moment(nativeTimeNow).set({ hour: 15, minute: 59, second: 59, millisecond: 0 }); // only for testing
     console.log('currentTime', currentTime);
     setButtonClassName("waiting-to-start");
-    const selectedMarketTimings = MARKET_TIMINGS[selectedTimeZone];
-    console.log('current time between market timings?', currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop));
-    if (currentTime.isAfter(selectedMarketTimings.start) && !currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop)) {
-      console.log('current time has crossed market start');
+    const selectedMarketStart = moment(MARKET_TIMINGS[selectedTimeZone].start);
+    const selectedMarketStop = moment(MARKET_TIMINGS[selectedTimeZone].stop);
+    if (currentTime.isAfter(selectedMarketStart) && !currentTime.isBetween(selectedMarketStart, selectedMarketStop)) {
       if (selectedTimeZone !== 'Asia' && selectedTimeZone !== 'Asia + London') {
-        console.log('adding 1 day to market start.');
-        selectedMarketTimings.start.add(1, 'days');
+        selectedMarketStart.add(1, 'days');
       }
     }
-    let timeDifferenceFromMarketStart = selectedMarketTimings.start.diff(currentTime, 'milliseconds');
-    let timeDifferenceFromMarketStop = selectedMarketTimings.stop.diff(currentTime, 'milliseconds');
+    let timeDifferenceFromMarketStart = selectedMarketStart.diff(currentTime, 'milliseconds');
+    let timeDifferenceFromMarketStop = selectedMarketStop.diff(currentTime, 'milliseconds');
     setTimeDifferenceFromMarketStop(timeDifferenceFromMarketStop);
-    console.log('market start', selectedMarketTimings.start);
+    console.log('market start', selectedMarketStart);
+    console.log('market stop', selectedMarketStop);
     timeDifferenceFromMarketStart = timeDifferenceFromMarketStart - (timeDifferenceFromMarketStart % 10);
     console.log('timeDifferenceFromMarketStart', timeDifferenceFromMarketStart);
     console.log('timeDifferenceFromMarketStop', timeDifferenceFromMarketStop);
     if (timeDifferenceFromMarketStart > 0) {
       setTime(timeDifferenceFromMarketStart);
     }
-    if (selectedTimeZone === 'Asia + London' && timeDifferenceFromMarketStart < 0 && ((!currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop)) || currentTime.day() === 0)) {
-      const timeDifferenceFromMarketStart = selectedMarketTimings.start.add(1, 'days').diff(currentTime, 'milliseconds');
-        setTime(Math.abs(timeDifferenceFromMarketStart));
-      }
+    if (selectedTimeZone === 'Asia + London' && timeDifferenceFromMarketStart < 0 && ((!currentTime.isBetween(selectedMarketStart, selectedMarketStop)) || currentTime.day() === 0)) {
+      selectedMarketStart.add(1, 'days').diff(currentTime, 'milliseconds');
+      setTimeDifferenceFromMarketStop(selectedMarketStop.add(1, 'days').diff(currentTime, 'milliseconds'));
+      console.log(running, time);
+      startTimer();
+    }
 
-    if (currentTime.isBetween(selectedMarketTimings.start, selectedMarketTimings.stop)) {
-      setButtonClassName("stop");
-      setTime(0);
+    if (currentTime.isBetween(selectedMarketStart, selectedMarketStop)) {
+      console.log('current time between market timings');
+      startTimer();
     }
   }
 
@@ -98,11 +99,17 @@ function TimeArea() {
     setSelectedTimeZone(event.target.value);
   }
 
-  function stopTimer() {
-    setRunning(false);
-    setTime(0);
-
+  function startTimer() {
+    console.log('startTimer');
+    setButtonClassName("stop");
   }
+
+  function stopTimer() {
+    console.log('stopTimer', time);
+    setTime(0);
+    setRunning(false);
+  }
+
   function toastStatus(text) {
     toast(text, {
       position: "top-right",
@@ -133,7 +140,10 @@ function TimeArea() {
         else {
           setTime((prevTime) => {
             if (prevTime >= timeDifferenceFromMarketStop) {
-              stopTimer();
+              console.log('stopping timer because current time has exceeded market stop time', prevTime, timeDifferenceFromMarketStop);
+              // stopTimer();
+              setRunning(false)
+              return 0;
             }
             return prevTime + 10;
           });
