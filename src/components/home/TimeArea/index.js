@@ -11,8 +11,8 @@ const MARKET_TIMINGS = {
     stop: moment().set({ hour: 8, minute: 0, second: 0, millisecond: 0 }).add(1, 'days'),
   },
   'London': {
-    start: moment().set({ hour: 8, minute: 0, second: 0, millisecond: 0 }),
-    stop: moment().set({ hour: 16, minute: 0, second: 0, millisecond: 0 }),
+    start: moment().set({ hour: 7, minute: 0, second: 0, millisecond: 0 }),
+    stop: moment().set({ hour: 17, minute: 0, second: 0, millisecond: 0 }),
   },
   'Asia + London': {
     start: moment().set({ hour: 22, minute: 0, second: 0, millisecond: 0 }).subtract(1, 'days'),
@@ -42,7 +42,7 @@ function TimeArea() {
 
   function calculateMarketTimings() {
     setTime(0);
-    const nativeTimeNow = new Date().toLocaleString('en-US', { timeZone: 'Europe/London' });
+    const nativeTimeNow = new Date().toLocaleString('en-US', { timeZone: 'Africa/Abidjan' });
     console.log('nativeTimeNow', nativeTimeNow);
     const currentTime = moment(nativeTimeNow);
     // const currentTime = moment(nativeTimeNow).set({ hour: 15, minute: 59, second: 59, millisecond: 0 }); // only for testing
