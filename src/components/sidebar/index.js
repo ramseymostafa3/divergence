@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 function Sidebar (props) {
     return (
 
-      <nav id="sidebar" aria-label="Main Navigation" className={`${props.sidebarState == true ? 'menu-open' : ''}`}>
+      <nav id="sidebar" aria-label="Main Navigation" className={`${props.sidebarState === true ? 'menu-open' : ''}`}>
           <div className="bg-header-dark">
             <div className="content-header">
               <Link className="font-w600 text-white tracking-wide" to="/">
                 <img src={Logo} alt="Divergence" />
               </Link>
               <div>
-                <a className="text-white" href="javascript:void(0)" onClick={props.togglerFunction}>
+                <div className="text-white linkPointer" onClick={props.togglerFunction}>
                   <i className="fa fa-times-circle"></i>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -35,72 +35,78 @@ function Sidebar (props) {
                   </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-info-circle"></i>
                     <span className="nav-main-link-name">About</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-comment-dots"></i>
                     <span className="nav-main-link-name">Faq</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-hand-point-up"></i>
                     <span className="nav-main-link-name">Subscriptions</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-play-circle"></i>
                     <span className="nav-main-link-name">Get Started</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-calendar-alt"></i>
                     <span className="nav-main-link-name">Calendar</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-lightbulb"></i>
                     <span className="nav-main-link-name">Investment Ideas</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-search"></i>
                     <span className="nav-main-link-name">Research</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fa fa-graduation-cap"></i>
                     <span className="nav-main-link-name">Education</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-main-item">
-                  <a className="nav-main-link" href="javascript:;">
+                  <Link className="nav-main-link" to="/">
                     <i className="nav-main-link-icon fab fa-twitter-square"></i>
                     <span className="nav-main-link-name">Social Impact</span>
-                  </a>
+                  </Link>
+                </li>
+                <li className="nav-main-item">
+                  <Link className="nav-main-link" to="/general">
+                    <i className="nav-main-link-icon fas fa-user-circle"></i>
+                    <span className="nav-main-link-name">General</span>
+                  </Link>
                 </li>
               </ul>
               
               <div className="nav-main-widget">
                 <h2>New to trading?</h2>
-                <a href="javascript:;">Find out more</a>
+                <Link to="/">Find out more</Link>
               </div>
 
             </div>
   
             <ul className="lowerMenu">
-              <li><a href="javascript:;"><i className="fa fa-cog"></i></a></li>
-              <li><a href="javascript:;"><i className="fa fa-question-circle"></i></a></li>
-              <li><a href="javascript:;"><i className="fas fa-sign-out-alt"></i></a></li>
+              <li><Link to="/"><i className="fa fa-cog"></i></Link></li>
+              <li><Link to="/"><i className="fa fa-question-circle"></i></Link></li>
+              <li><Link to="/"><i className="fas fa-sign-out-alt"></i></Link></li>
             </ul>
   
           </div>

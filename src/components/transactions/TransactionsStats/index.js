@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Select from 'react-select'
+import Select from 'react-select';
 
 function TransactionsStats() {
     const [startDate, setStartDate] = useState(new Date());
