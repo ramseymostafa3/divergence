@@ -10,6 +10,7 @@ import SentimentTable from '../SentimentTable';
 import AccountTable from '../AccountTable';
 import BackboneStrategyTable from '../BackboneStrategyTable';
 import OptimisationTable from '../OptimisationTable';
+import RSIEMAROCTable from '../RSIEMAROCTable';
 
 function ParameterSet() {
     const [tabIndex, setTabIndex] = useState(0);
@@ -24,6 +25,7 @@ function ParameterSet() {
             <Tab>Account</Tab>
             <Tab>Backbone Strategy</Tab>
             <Tab>Optimisation</Tab>
+            <Tab>RSI/EMA/ROC Strategy</Tab>
         </TabList>
         <TabPanel>
             <RiskManagementTable />
@@ -48,6 +50,9 @@ function ParameterSet() {
         </TabPanel>
         <TabPanel>
             <OptimisationTable />
+        </TabPanel>
+        <TabPanel>
+            <RSIEMAROCTable />
         </TabPanel>
     </Tabs> 
     )
