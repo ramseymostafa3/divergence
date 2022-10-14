@@ -1,8 +1,21 @@
 import React from "react";
 import ToggleYesNo from 'components/common/ToggleYesNo';
 import NumberFielder from 'components/common/numberfielder';
+import Select from 'react-select';
 
-function RiskManagementTable() {
+const TimeForceOptions = [
+    { value: 'FOK', label: 'FOK'}
+]
+
+const OrderTypeOptions = [
+    { value: 'MARKET', label: 'MARKET'}
+]
+
+const ExpireTypeOptions = [
+    { value: 'DFB', label: 'DFB'}
+]
+
+function TradeTable() {
     return (
         <div className="divergence-table table-responsive mb-0">
             <table class="table">
@@ -16,82 +29,40 @@ function RiskManagementTable() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Volatility Cap</td>
-                        <td><NumberFielder defaultvalue='3' /></td>
-                        <td><NumberFielder defaultvalue='1.9' /></td>
-                        <td><NumberFielder defaultvalue='1.9' /></td>
+                        <td>Time in force</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={TimeForceOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={TimeForceOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={TimeForceOptions} /></td>
                     </tr>
                     <tr>
-                        <td>Use Margin Cap</td>
+                        <td>Order Type</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={OrderTypeOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={OrderTypeOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={OrderTypeOptions} /></td>
+                    </tr>
+                    <tr>
+                        <td>Force Open</td>
                         <td><ToggleYesNo /></td>
                         <td><ToggleYesNo /></td>
                         <td><ToggleYesNo /></td>
                     </tr>
                     <tr>
-                        <td>Use Spread Cap</td>
+                        <td>Expire Type</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={ExpireTypeOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={ExpireTypeOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={ExpireTypeOptions} /></td>
+                    </tr>
+                    <tr>
+                        <td>Use RSI</td>
                         <td><ToggleYesNo /></td>
                         <td><ToggleYesNo /></td>
                         <td><ToggleYesNo /></td>
                     </tr>
                     <tr>
-                        <td>Spread Multiplier</td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                    </tr>
-                    <tr>
-                        <td>Limit Distance</td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                    </tr>
-                    <tr>
-                        <td>Margin Cap</td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                    </tr>
-                    <tr>
-                        <td>Guaranteed Stop</td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                    </tr>
-                    <tr>
-                        <td>Take Profit</td>
-                        <td><NumberFielder defaultvalue='0.9' /></td>
-                        <td><NumberFielder defaultvalue='0.9' /></td>
-                        <td><NumberFielder defaultvalue='0.9' /></td>
-                    </tr>
-                    <tr>
-                        <td>Stop Limit</td>
-                        <td><NumberFielder defaultvalue='200' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                    </tr>
-                    <tr>
-                        <td>Spread Cap</td>
-                        <td><NumberFielder defaultvalue='-2' /></td>
-                        <td><NumberFielder defaultvalue='-8' /></td>
-                        <td><NumberFielder defaultvalue='-100' /></td>
-                    </tr>
-                    <tr>
-                        <td>Stop Limit</td>
-                        <td><NumberFielder defaultvalue='200' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                    </tr>
-                    <tr>
-                        <td>Volatility Floor</td>
-                        <td><NumberFielder defaultvalue='0.15' /></td>
-                        <td><NumberFielder defaultvalue='0.15' /></td>
-                        <td><NumberFielder defaultvalue='0.48' /></td>
-                    </tr>
-                    <tr>
-                        <td>Margin in use cap</td>
-                        <td><NumberFielder defaultvalue='65' /></td>
-                        <td><NumberFielder defaultvalue='65' /></td>
-                        <td><NumberFielder defaultvalue='65' /></td>
+                        <td>Trade Size</td>
+                        <td><NumberFielder defaultvalue='2' /></td>
+                        <td><NumberFielder defaultvalue='2' /></td>
+                        <td><NumberFielder defaultvalue='2' /></td>
                     </tr>
                 </tbody>
             </table>
@@ -99,4 +70,4 @@ function RiskManagementTable() {
     );
 }
 
-export default RiskManagementTable;
+export default TradeTable;

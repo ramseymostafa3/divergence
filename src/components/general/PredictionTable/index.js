@@ -1,8 +1,14 @@
 import React from "react";
 import ToggleYesNo from 'components/common/ToggleYesNo';
 import NumberFielder from 'components/common/numberfielder';
+import Select from 'react-select';
 
-function RiskManagementTable() {
+const AlgorithmOptions = [
+    { value: 'LinearRegression', label: 'LinearRegression'},
+    { value: 'LSTM', label: 'LSTM'},
+]
+
+function PredictionTable() {
     return (
         <div className="divergence-table table-responsive mb-0">
             <table class="table">
@@ -16,87 +22,30 @@ function RiskManagementTable() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Volatility Cap</td>
-                        <td><NumberFielder defaultvalue='3' /></td>
-                        <td><NumberFielder defaultvalue='1.9' /></td>
-                        <td><NumberFielder defaultvalue='1.9' /></td>
-                    </tr>
-                    <tr>
-                        <td>Use Margin Cap</td>
+                        <td>High Resolution</td>
                         <td><ToggleYesNo /></td>
                         <td><ToggleYesNo /></td>
                         <td><ToggleYesNo /></td>
                     </tr>
                     <tr>
-                        <td>Use Spread Cap</td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
+                        <td>Algorithm</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={AlgorithmOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={AlgorithmOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={AlgorithmOptions} /></td>
                     </tr>
                     <tr>
-                        <td>Spread Multiplier</td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                    </tr>
-                    <tr>
-                        <td>Limit Distance</td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                    </tr>
-                    <tr>
-                        <td>Margin Cap</td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                    </tr>
-                    <tr>
-                        <td>Guaranteed Stop</td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                    </tr>
-                    <tr>
-                        <td>Take Profit</td>
+                        <td>Prediction Accuracy</td>
                         <td><NumberFielder defaultvalue='0.9' /></td>
                         <td><NumberFielder defaultvalue='0.9' /></td>
                         <td><NumberFielder defaultvalue='0.9' /></td>
-                    </tr>
-                    <tr>
-                        <td>Stop Limit</td>
-                        <td><NumberFielder defaultvalue='200' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                    </tr>
-                    <tr>
-                        <td>Spread Cap</td>
-                        <td><NumberFielder defaultvalue='-2' /></td>
-                        <td><NumberFielder defaultvalue='-8' /></td>
-                        <td><NumberFielder defaultvalue='-100' /></td>
-                    </tr>
-                    <tr>
-                        <td>Stop Limit</td>
-                        <td><NumberFielder defaultvalue='200' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                    </tr>
-                    <tr>
-                        <td>Volatility Floor</td>
-                        <td><NumberFielder defaultvalue='0.15' /></td>
-                        <td><NumberFielder defaultvalue='0.15' /></td>
-                        <td><NumberFielder defaultvalue='0.48' /></td>
-                    </tr>
-                    <tr>
-                        <td>Margin in use cap</td>
-                        <td><NumberFielder defaultvalue='65' /></td>
-                        <td><NumberFielder defaultvalue='65' /></td>
-                        <td><NumberFielder defaultvalue='65' /></td>
                     </tr>
                 </tbody>
             </table>
+            <br/>
+            <br/>
+            <br/>
         </div>
     );
 }
 
-export default RiskManagementTable;
+export default PredictionTable;

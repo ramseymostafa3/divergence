@@ -1,8 +1,14 @@
 import React from "react";
-import ToggleYesNo from 'components/common/ToggleYesNo';
 import NumberFielder from 'components/common/numberfielder';
+import Select from 'react-select';
 
-function RiskManagementTable() {
+const GranularityOptions = [
+    { value: 'MINUTE_15', label: 'MINUTE_15'},
+    { value: 'HOUR', label: 'HOUR'},
+    { value: 'DAY', label: 'DAY'}
+]
+
+function BackboneStrategyTable() {
     return (
         <div className="divergence-table table-responsive mb-0">
             <table class="table">
@@ -16,87 +22,96 @@ function RiskManagementTable() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Volatility Cap</td>
-                        <td><NumberFielder defaultvalue='3' /></td>
-                        <td><NumberFielder defaultvalue='1.9' /></td>
-                        <td><NumberFielder defaultvalue='1.9' /></td>
+                        <td>RSI Granularity</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
                     </tr>
                     <tr>
-                        <td>Use Margin Cap</td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
+                        <td>RSI Window</td>
+                        <td><NumberFielder defaultvalue='15' /></td>
+                        <td><NumberFielder defaultvalue='15' /></td>
+                        <td><NumberFielder defaultvalue='15' /></td>
                     </tr>
                     <tr>
-                        <td>Use Spread Cap</td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
+                        <td>Cond 1 Window</td>
+                        <td><NumberFielder defaultvalue='21' /></td>
+                        <td><NumberFielder defaultvalue='21' /></td>
+                        <td><NumberFielder defaultvalue='21' /></td>
                     </tr>
                     <tr>
-                        <td>Spread Multiplier</td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
-                        <td><NumberFielder defaultvalue='1.2' /></td>
+                        <td>OVERBOUGHT</td>
+                        <td><NumberFielder defaultvalue='75' /></td>
+                        <td><NumberFielder defaultvalue='75' /></td>
+                        <td><NumberFielder defaultvalue='75' /></td>
                     </tr>
                     <tr>
-                        <td>Limit Distance</td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                        <td><NumberFielder defaultvalue='4' /></td>
-                        <td><NumberFielder defaultvalue='4' /></td>
+                        <td>Cond 1 Granularity</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
                     </tr>
                     <tr>
-                        <td>Margin Cap</td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                        <td><NumberFielder defaultvalue='100' /></td>
-                        <td><NumberFielder defaultvalue='100' /></td>
+                        <td>Cond 2 Granularity</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
                     </tr>
                     <tr>
-                        <td>Guaranteed Stop</td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
-                        <td><ToggleYesNo /></td>
+                        <td>Pin Bar Granularity</td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
                     </tr>
                     <tr>
-                        <td>Take Profit</td>
-                        <td><NumberFielder defaultvalue='0.9' /></td>
-                        <td><NumberFielder defaultvalue='0.9' /></td>
-                        <td><NumberFielder defaultvalue='0.9' /></td>
-                    </tr>
-                    <tr>
-                        <td>Stop Limit</td>
+                        <td>Cond 2 Window</td>
                         <td><NumberFielder defaultvalue='200' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                    </tr>
-                    <tr>
-                        <td>Spread Cap</td>
-                        <td><NumberFielder defaultvalue='-2' /></td>
-                        <td><NumberFielder defaultvalue='-8' /></td>
-                        <td><NumberFielder defaultvalue='-100' /></td>
-                    </tr>
-                    <tr>
-                        <td>Stop Limit</td>
                         <td><NumberFielder defaultvalue='200' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
-                        <td><NumberFielder defaultvalue='250' /></td>
+                        <td><NumberFielder defaultvalue='200' /></td>
                     </tr>
                     <tr>
-                        <td>Volatility Floor</td>
-                        <td><NumberFielder defaultvalue='0.15' /></td>
-                        <td><NumberFielder defaultvalue='0.15' /></td>
-                        <td><NumberFielder defaultvalue='0.48' /></td>
+                        <td>Cond 1 Fast EMA</td>
+                        <td><NumberFielder defaultvalue='8' /></td>
+                        <td><NumberFielder defaultvalue='8' /></td>
+                        <td><NumberFielder defaultvalue='8' /></td>
                     </tr>
                     <tr>
-                        <td>Margin in use cap</td>
-                        <td><NumberFielder defaultvalue='65' /></td>
-                        <td><NumberFielder defaultvalue='65' /></td>
-                        <td><NumberFielder defaultvalue='65' /></td>
+                        <td>Cond 2 Fast EMA</td>
+                        <td><NumberFielder defaultvalue='50' /></td>
+                        <td><NumberFielder defaultvalue='50' /></td>
+                        <td><NumberFielder defaultvalue='50' /></td>
+                    </tr>
+                    <tr>
+                        <td>Cond 1 Slow EMA</td>
+                        <td><NumberFielder defaultvalue='21' /></td>
+                        <td><NumberFielder defaultvalue='21' /></td>
+                        <td><NumberFielder defaultvalue='21' /></td>
+                    </tr>
+                    <tr>
+                        <td>Cond 2 Slow EMA</td>
+                        <td><NumberFielder defaultvalue='200' /></td>
+                        <td><NumberFielder defaultvalue='200' /></td>
+                        <td><NumberFielder defaultvalue='200' /></td>
+                    </tr>
+                    <tr>
+                        <td>RSI Period</td>
+                        <td><NumberFielder defaultvalue='6' /></td>
+                        <td><NumberFielder defaultvalue='6' /></td>
+                        <td><NumberFielder defaultvalue='6' /></td>
+                    </tr>
+                    <tr>
+                        <td>OVERSOLD</td>
+                        <td><NumberFielder defaultvalue='20' /></td>
+                        <td><NumberFielder defaultvalue='20' /></td>
+                        <td><NumberFielder defaultvalue='20' /></td>
                     </tr>
                 </tbody>
             </table>
+            <br/>
+            <br/>
+            <br/>
         </div>
     );
 }
 
-export default RiskManagementTable;
+export default BackboneStrategyTable;

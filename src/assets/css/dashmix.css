@@ -32183,6 +32183,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   font-weight: 300;
   border: 0;
   padding: 0.5rem;
+  vertical-align: middle;
 }
 .divergence-table .textUpper {
   text-transform: uppercase;
@@ -32238,6 +32239,78 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 .divergence-table .tdSearch {
   background: #2b2b2b;
   text-align: center;
+}
+
+.selectBoxTable .css-1s2u09g-control,
+.selectBoxTable .css-1pahdxg-control,
+.selectBoxTable .css-1s2u09g-control:hover,
+.selectBoxTable .css-1pahdxg-control:hover {
+  width: 80%;
+  min-height: 30px;
+  background-color: #2e2e2e;
+  border: 1px solid #393939;
+  box-shadow: none;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #fff;
+  padding: 0;
+  height: auto;
+}
+.selectBoxTable .css-tlfecz-indicatorContainer,
+.selectBoxTable .css-1gtu0rj-indicatorContainer {
+  padding: 4px;
+}
+.selectBoxTable .css-tlfecz-indicatorContainer,
+.selectBoxTable .css-1gtu0rj-indicatorContainer,
+.selectBoxTable .css-tlfecz-indicatorContainer:hover,
+.selectBoxTable .css-1gtu0rj-indicatorContainer:hover {
+  color: rgba(255,255,255,0.4);
+}
+
+.selectBoxTable .css-1okebmr-indicatorSeparator {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.selectBoxTable .css-tlfecz-indicatorContainer svg,
+.selectBoxTable .css-1gtu0rj-indicatorContainer svg {
+  width: 16px;
+  height: 16px;
+}
+
+.selectBoxTable .css-319lph-ValueContainer {
+  padding: 0 5px;
+}
+
+.selectBoxTable .css-6j8wv5-Input {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.selectBoxTable .css-qc6sy-singleValue {
+  color: #fff;
+}
+
+.selectBoxTable .selectBoxStyle__menu {
+  max-width: 80%;
+}
+
+.selectBoxTable .selectBoxStyle__menu > div {
+  background-color: #222;
+  border: 1px solid #393939;
+  padding: 4px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.selectBoxTable .selectBoxStyle__menu > div > div {
+  background-color: transparent;
+  padding: 2px 4px;
+}
+
+.selectBoxTable .selectBoxStyle__menu > div > div:hover {
+  background-color: #f15200;
 }
 
 .showHide {
@@ -32790,4 +32863,12 @@ ul.pagination > li.active {
 .labelSwitch {
   margin-bottom: 0;
   font-weight: 300;
+}
+
+.generalTab .react-tabs__tab-list {
+  flex-wrap: wrap;
+  margin: 0;
+}
+.generalTab .react-tabs__tab {
+  margin-bottom: 15px;
 }

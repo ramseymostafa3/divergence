@@ -14,10 +14,7 @@ import OptimisationTable from '../OptimisationTable';
 function ParameterSet() {
     const [tabIndex, setTabIndex] = useState(0);
     return (
-
-<div className="divergence-table table-responsive">
-        
-    <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+    <Tabs className="generalTab" selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
             <Tab>Risk Management</Tab>
             <Tab>Trade</Tab>
@@ -53,9 +50,6 @@ function ParameterSet() {
             <OptimisationTable />
         </TabPanel>
     </Tabs> 
-
-</div>
-    
     )
 }
 
