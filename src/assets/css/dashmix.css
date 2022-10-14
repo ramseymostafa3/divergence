@@ -32872,3 +32872,6 @@ ul.pagination > li.active {
 .generalTab .react-tabs__tab {
   margin-bottom: 15px;
 }
+.linkPointer {
+  cursor: pointer;
+}
