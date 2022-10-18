@@ -72,9 +72,24 @@ function TradeTimingTable() {
                     </tr>
                     <tr>
                         <td>Granularity</td>
-                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
-                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
-                        <td><Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} /></td>
+                        <td>
+                            <div className="InputWidSelect">
+                                <NumberFielder defaultvalue='15' />
+                                <Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} />
+                            </div>
+                        </td>
+                        <td>
+                            <div className="InputWidSelect">
+                                <NumberFielder defaultvalue='30' />
+                                <Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} />
+                            </div>
+                        </td>
+                        <td>
+                            <div className="InputWidSelect">
+                                <NumberFielder defaultvalue='60' />
+                                <Select className="selectBoxTable" classNamePrefix="selectBoxStyle" options={GranularityOptions} />
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>Rolling Window</td>
