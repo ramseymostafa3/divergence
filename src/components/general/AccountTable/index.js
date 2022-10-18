@@ -2,7 +2,8 @@ import React from "react";
 import Select from 'react-select';
 
 const AccountOptions = [
-    { value: 'SPREADBET', label: 'SPREADBET'}
+    { value: 'SPREADBET', label: 'SPREADBET'},
+    { value: 'CFD', label: 'CFD'}
 ]
 
 function AccountTable() {

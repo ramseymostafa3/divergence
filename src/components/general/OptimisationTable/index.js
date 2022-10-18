@@ -1,5 +1,6 @@
 import React from "react";
 import NumberFielder from 'components/common/numberfielder';
+import NumberFormat from 'react-number-format';
 
 function OptimisationTable() {
     return (
@@ -25,6 +26,19 @@ function OptimisationTable() {
                         <td><NumberFielder defaultvalue='0.1' /></td>
                         <td><NumberFielder defaultvalue='0.1' /></td>
                         <td><NumberFielder defaultvalue='0.1' /></td>
+                    </tr>
+                    <tr>
+                        <td>Fasts</td>
+                        
+                        <td><NumberFormat className='w100' name="" defaultValue='45' displayType={'input'}  /></td>
+                        <td><NumberFormat className='w100' name="" defaultValue='60' displayType={'input'}  /></td>
+                        <td><NumberFormat className='w100' name="" defaultValue='1' displayType={'input'}  /></td>
+                    </tr>
+                    <tr>
+                        <td>Slows</td>
+                        <td><NumberFormat className='w100' name="" defaultValue='189' displayType={'input'}  /></td>
+                        <td><NumberFormat className='w100' name="" defaultValue='210' displayType={'input'}  /></td>
+                        <td><NumberFormat className='w100' name="" defaultValue='1' displayType={'input'}  /></td>
                     </tr>
                 </tbody>
             </table>
