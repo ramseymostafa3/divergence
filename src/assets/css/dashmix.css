@@ -32875,3 +32875,11 @@ ul.pagination > li.active {
 .linkPointer {
   cursor: pointer;
 }
+.InputWidSelect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.InputWidSelect .selectBoxTable {
+  width: 80%;
+}
