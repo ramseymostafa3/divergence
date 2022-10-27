@@ -7,6 +7,7 @@ import Positions from "pages/positions";
 import Summary from "pages/summary";
 import TradeSetUp from "pages/tradesetup";
 import General from "pages/general";
+import Admin from "pages/admin";
 
 import "assets/css/dashmix.css";
 import "assets/css/responsive.css";
@@ -22,6 +23,7 @@ function App() {
         <Route exact path={"/summary"} element={<Summary />} />
         <Route exact path={"/tradesetup"} element={<TradeSetUp />} />
         <Route exact path={"/general"} element={<General />} />
+        <Route exact path={"/admin"} element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );

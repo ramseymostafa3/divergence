@@ -94,6 +94,12 @@ function Sidebar (props) {
                     <span className="nav-main-link-name">General</span>
                   </Link>
                 </li>
+                <li className="nav-main-item">
+                  <Link className="nav-main-link" to="/admin">
+                    <i className="nav-main-link-icon fas fa-solar-panel"></i>
+                    <span className="nav-main-link-name">Admin Panel</span>
+                  </Link>
+                </li>
               </ul>
               
               <div className="nav-main-widget">
