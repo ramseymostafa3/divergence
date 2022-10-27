@@ -32508,6 +32508,10 @@ ul.pagination > li.active {
   background-color: #f15200;
 }
 
+ul.pagination.noMb li {
+  margin-top: 0;
+}
+
 .react-tabs__tab-list { 
   border-bottom: none;
   display: flex;
@@ -32882,4 +32886,55 @@ ul.pagination > li.active {
 }
 .InputWidSelect .selectBoxTable {
   width: 80%;
+}
+.rowCount {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0;
+}
+.userCount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f76400;
+  position: relative;
+  border-radius: 7px;
+  padding: 10px 20px 10px 57px;
+  overflow: hidden;
+}
+.userCount span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+.userCount strong {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f76400;
+  margin: 0 0 0 5px;
+}
+.userCount .iCon {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 42px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  background: #f76400;
+}
+
+h2.adminTitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #f76400;
+  margin: 0;
+  padding: 0;
 }
