@@ -1,0 +1,19 @@
+.hover1:hover p {
+  background-color: white;
+}
+
+.hover1:hover .in {
+  color: black;
+}
+
+.hover2:hover p {
+  background-color: white;
+}
+
+.hover2:hover .h {
+  color: red;
+}
+
+.hover2:hover .in {
+  color: black;
+}
