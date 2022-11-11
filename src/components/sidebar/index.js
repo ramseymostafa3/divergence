@@ -62,12 +62,14 @@ function Sidebar(props) {
                 </Link>
               </li>
             }
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/">
-                <i className="nav-main-link-icon fa fa-play-circle"></i>
-                <span className="nav-main-link-name">Get Started</span>
-              </Link>
-            </li>
+            {isAdmin &&
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/">
+                  <i className="nav-main-link-icon fa fa-play-circle"></i>
+                  <span className="nav-main-link-name">Get Started</span>
+                </Link>
+              </li>
+            }
             <li className="nav-main-item">
               <Link className="nav-main-link" to="/">
                 <i className="nav-main-link-icon fa fa-calendar-alt"></i>
@@ -90,14 +92,13 @@ function Sidebar(props) {
                 </Link>
               </li>
             }
-            {isAdmin &&
-              <li className="nav-main-item">
-                <Link className="nav-main-link" to="/">
-                  <i className="nav-main-link-icon fa fa-graduation-cap"></i>
-                  <span className="nav-main-link-name">Education</span>
-                </Link>
-              </li>
-            }
+            <li className="nav-main-item">
+              <Link className="nav-main-link" to="/">
+                <i className="nav-main-link-icon fa fa-graduation-cap"></i>
+                <span className="nav-main-link-name">Education</span>
+              </Link>
+            </li>
+
             {isAdmin &&
               <li className="nav-main-item">
                 <Link className="nav-main-link" to="/">
