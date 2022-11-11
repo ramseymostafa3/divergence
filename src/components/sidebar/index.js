@@ -1,8 +1,11 @@
 import React from 'react';
 import Logo from 'assets/media/logo.png';
 import { Link } from "react-router-dom";
+import { selectIsAdmin } from '../../slices/authSlice'
+import { useDispatch, useSelector } from 'react-redux'
 
 function Sidebar(props) {
+  const isAdmin = useSelector(selectIsAdmin);
   const logout = () => {
     console.log('logout');
     localStorage.removeItem('credentials');
@@ -51,12 +54,14 @@ function Sidebar(props) {
                 <span className="nav-main-link-name">Faq</span>
               </Link>
             </li>
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/">
-                <i className="nav-main-link-icon fa fa-hand-point-up"></i>
-                <span className="nav-main-link-name">Subscriptions</span>
-              </Link>
-            </li>
+            {isAdmin &&
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/">
+                  <i className="nav-main-link-icon fa fa-hand-point-up"></i>
+                  <span className="nav-main-link-name">Subscriptions</span>
+                </Link>
+              </li>
+            }
             <li className="nav-main-item">
               <Link className="nav-main-link" to="/">
                 <i className="nav-main-link-icon fa fa-play-circle"></i>
@@ -69,42 +74,55 @@ function Sidebar(props) {
                 <span className="nav-main-link-name">Calendar</span>
               </Link>
             </li>
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/">
-                <i className="nav-main-link-icon fa fa-lightbulb"></i>
-                <span className="nav-main-link-name">Investment Ideas</span>
-              </Link>
-            </li>
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/">
-                <i className="nav-main-link-icon fa fa-search"></i>
-                <span className="nav-main-link-name">Research</span>
-              </Link>
-            </li>
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/">
-                <i className="nav-main-link-icon fa fa-graduation-cap"></i>
-                <span className="nav-main-link-name">Education</span>
-              </Link>
-            </li>
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/">
-                <i className="nav-main-link-icon fab fa-twitter-square"></i>
-                <span className="nav-main-link-name">Social Impact</span>
-              </Link>
-            </li>
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/general">
-                <i className="nav-main-link-icon fas fa-user-circle"></i>
-                <span className="nav-main-link-name">General</span>
-              </Link>
-            </li>
-            <li className="nav-main-item">
-              <Link className="nav-main-link" to="/admin">
-                <i className="nav-main-link-icon fas fa-solar-panel"></i>
-                <span className="nav-main-link-name">Admin Panel</span>
-              </Link>
-            </li>
+            {isAdmin &&
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/">
+                  <i className="nav-main-link-icon fa fa-lightbulb"></i>
+                  <span className="nav-main-link-name">Investment Ideas</span>
+                </Link>
+              </li>
+            }
+            {isAdmin &&
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/">
+                  <i className="nav-main-link-icon fa fa-search"></i>
+                  <span className="nav-main-link-name">Research</span>
+                </Link>
+              </li>
+            }
+            {isAdmin &&
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/">
+                  <i className="nav-main-link-icon fa fa-graduation-cap"></i>
+                  <span className="nav-main-link-name">Education</span>
+                </Link>
+              </li>
+            }
+            {isAdmin &&
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/">
+                  <i className="nav-main-link-icon fab fa-twitter-square"></i>
+                  <span className="nav-main-link-name">Social Impact</span>
+                </Link>
+              </li>
+            }
+            {isAdmin &&
+
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/general">
+                  <i className="nav-main-link-icon fas fa-user-circle"></i>
+                  <span className="nav-main-link-name">General</span>
+                </Link>
+              </li>
+            }
+            {isAdmin &&
+              <li className="nav-main-item">
+                <Link className="nav-main-link" to="/admin">
+                  <i className="nav-main-link-icon fas fa-solar-panel"></i>
+                  <span className="nav-main-link-name">Admin Panel</span>
+                </Link>
+              </li>
+            }
           </ul>
 
           <div className="nav-main-widget">

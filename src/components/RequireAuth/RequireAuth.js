@@ -16,11 +16,13 @@ export const RequireAuth = ({ redirectTo = '/login' }) => {
     const initLocalStorage = async () => {
       try {
         const credentials = localStorage.getItem('credentials')
+        const isAdmin = localStorage.getItem('isAdmin')
 
         if (!credentials) {
           dispatch(
             setUser({
               isAuth: false,
+              isAdmin: false,
             })
           )
         } else {
@@ -53,6 +55,7 @@ export const RequireAuth = ({ redirectTo = '/login' }) => {
           dispatch(
             setUser({
               isAuth: true,
+              isAdmin: user?.data?.admin,
               ...user?.data,
             })
           )

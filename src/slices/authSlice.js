@@ -9,6 +9,7 @@ export const authSlice = createSlice({
       lastName: '',
       password: '',
       isAuth: null,
+      isAdmin: false,
     },
   },
   reducers: {
@@ -31,3 +32,4 @@ export const selectUserCredentials = (state) => {
   };
 };
 export const selectIsAuth = state => state.auth.user.isAuth;
+export const selectIsAdmin = state => state.auth.user.isAdmin;
